@@ -19,3 +19,16 @@
 (cua-mode t)
 ;; CUAキーバインドを無効にする
 (setq cua-enable-cua-keys nil)
+
+;;; カーソル位置のファイルパスやアドレスを "C-x C-f" で開く
+(ffap-bindings)
+
+;; ベル音を無効にする
+(setq ring-bell-function 'ignore)
+
+;; 同名バッファの識別文字列を変更する
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+
+;; バッファの自動再読み込み
+(global-auto-revert-mode 1)
