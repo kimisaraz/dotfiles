@@ -27,6 +27,17 @@
 ;; (set-face-background  'show-paren-match-face nil)
 ;; (set-face-underline-p  'show-paren-match-face "yellow")
 
+;;; バックアップとオートセーブの設定
+;; バックアップとオートセーブファイルを~/.emacs.d/backups/へ集める
+(add-to-list 'backup-directory-alist
+             (cons "." "~/.emacs.d/backups/"))
+(setq auto-save-file-name-transforms
+      `((".*" ,(expand-file-name "~/.emacs.d/backups/") t)))
+;; オートセーブファイル作成までの秒間隔
+(setq auto-save-timeout 60) ; 初期値は30
+;; オートセーブファイル作成までのタイプ間隔
+(setq auto-save-interval 150) ; 初期値は300
+
 ;;; cua-modeの矩形編集を利用
 ;; cua-modeをオン
 (cua-mode t)
