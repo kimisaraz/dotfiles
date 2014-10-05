@@ -8,7 +8,7 @@
 ;;; パスの設定
 (add-to-list 'exec-path "/usr/local/bin")
 
-;;; タブ文字の表示幅
+;;; インデントの設定
 ;; TABの表示幅
 (setq-default tab-width 4) ; 初期値は8
 ;; インデントにタブ文字を使用しない
