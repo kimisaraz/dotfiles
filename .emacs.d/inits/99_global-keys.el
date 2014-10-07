@@ -4,3 +4,5 @@
 (define-key global-map (kbd "M-o")     'other-window)
 (define-key global-map (kbd "C-x C-l") 'toggle-truncate-lines)
 (define-key global-map (kbd "M-k")     'kill-this-buffer)
+(define-key global-map (kbd "M-,")     'bs-cycle-next)
+(define-key global-map (kbd "M-.")     'bs-cycle-previous)
