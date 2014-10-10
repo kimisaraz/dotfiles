@@ -1,5 +1,3 @@
-;; Common Lispパッケージを読み込む
-(require 'cl)
 ;; Emacsからの質問をy/nで回答する
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; スタートアップメッセージを非表示
