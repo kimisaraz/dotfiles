@@ -1,8 +1,7 @@
-;; (keyboard-translate ?\C-h ?\C-?) ; C-hと<del>を置き換える
-(define-key global-map (kbd "C-h")     'delete-backward-char)
-(define-key global-map (kbd "C-x ?")   'help-command)
-(define-key global-map (kbd "M-o")     'other-window)
-(define-key global-map (kbd "C-x C-l") 'toggle-truncate-lines)
-(define-key global-map (kbd "M-k")     'kill-this-buffer)
-(define-key global-map (kbd "M-,")     'bs-cycle-next)
-(define-key global-map (kbd "M-.")     'bs-cycle-previous)
+(global-set-key (kbd "C-h")     'delete-backward-char) ; ex help-command
+(global-set-key (kbd "C-x ?")   'help-command)
+(global-set-key (kbd "M-o")     'other-window)          ; ex prefix for facemenu-set-*
+(global-set-key (kbd "C-x C-l") 'toggle-truncate-lines) ; ex downcase-region
+(global-set-key (kbd "M-k")     'kill-this-buffer)      ; ex kill-sentence
+(global-set-key (kbd "M-,")     'bs-cycle-next)
+(global-set-key (kbd "M-.")     'bs-cycle-previous)
