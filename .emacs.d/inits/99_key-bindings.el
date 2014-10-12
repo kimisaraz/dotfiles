@@ -5,3 +5,5 @@
 (global-set-key (kbd "M-k")     'kill-this-buffer)      ; ex kill-sentence
 (global-set-key (kbd "M-,")     'bs-cycle-next)
 (global-set-key (kbd "M-.")     'bs-cycle-previous)
+
+(define-key ac-mode-map (kbd "M-TAB") 'auto-complete) ; ex completion-at-point

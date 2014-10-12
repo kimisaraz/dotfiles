@@ -3,3 +3,5 @@
 
 /.emacs.d/backups/*
 !/.emacs.d/backups/.keep
+
+/.emacs.d/ac-comphist.dat
