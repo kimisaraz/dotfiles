@@ -4,3 +4,4 @@
 (depends-on "auto-complete")
 (depends-on "init-loader")
 (depends-on "molokai-theme")
+(depends-on "undo-tree")
