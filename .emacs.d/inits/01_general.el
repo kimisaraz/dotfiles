@@ -27,10 +27,9 @@
 
 ;;; バックアップとオートセーブの設定
 ;; バックアップとオートセーブファイルを~/.emacs.d/backups/へ集める
-(add-to-list 'backup-directory-alist
-             (cons "." "~/.emacs.d/backups/"))
-(setq auto-save-file-name-transforms
-      `((".*" ,(expand-file-name "~/.emacs.d/backups/") t)))
+(defvar my:backup-directory (expand-file-name "backups/" user-emacs-directory))
+(add-to-list 'backup-directory-alist (cons "." my:backup-directory))
+(setq auto-save-file-name-transforms `((".*", my:backup-directory t)))
 ;; オートセーブファイル作成までの秒間隔
 (setq auto-save-timeout 60) ; 初期値は30
 ;; オートセーブファイル作成までのタイプ間隔
