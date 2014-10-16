@@ -2,6 +2,7 @@
 (source melpa)
 
 (depends-on "auto-complete")
+(depends-on "fuzzy")
 (depends-on "init-loader")
 (depends-on "molokai-theme")
 (depends-on "undo-tree")
