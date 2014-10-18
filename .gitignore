@@ -4,4 +4,5 @@
 /.emacs.d/backups/*
 !/.emacs.d/backups/.keep
 
+/.emacs.d/recentf
 /.emacs.d/ac-comphist.dat
