@@ -53,3 +53,8 @@
 
 ;; バッファの自動再読み込み
 (global-auto-revert-mode 1)
+
+;;; ミニバッファ履歴の設定
+(savehist-mode 1)
+(setq history-length 500)
+(setq history-delete-duplicates t)
