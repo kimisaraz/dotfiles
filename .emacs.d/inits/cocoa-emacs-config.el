@@ -10,3 +10,6 @@
 (require 'ucs-normalize)
 (set-file-name-coding-system 'utf-8-hfs)
 (setq locale-coding-system 'utf-8-hfs)
+
+;; フレームをフルスクリーンにする
+(toggle-frame-fullscreen)
