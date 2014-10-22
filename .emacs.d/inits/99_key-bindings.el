@@ -11,6 +11,9 @@
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete) ; ex completion-at-point
 (define-key ac-complete-mode-map (kbd "C-s") 'ac-isearch)
 
+;; direx
+(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
+
 ;; point-undo
 (global-set-key (kbd "M-[") 'point-undo)
 (global-set-key (kbd "M-]") 'point-redo)

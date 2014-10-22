@@ -2,6 +2,7 @@
 (source melpa)
 
 (depends-on "auto-complete")
+(depends-on "direx")
 (depends-on "fuzzy")
 (depends-on "init-loader")
 (depends-on "point-undo")
