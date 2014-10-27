@@ -7,6 +7,11 @@
 (global-set-key (kbd "M-,")     'bs-cycle-next)
 (global-set-key (kbd "M-.")     'bs-cycle-previous)
 
+;; anzu
+(global-set-key (kbd "M-%")   'anzu-query-replace) ; ex query-replace
+(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp) ; ex query-replace-regexp
+(global-set-key (kbd "C-%")   'anzu-replace-at-cursor-thing)
+
 ;; auto-complete
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete) ; ex completion-at-point
 (define-key ac-complete-mode-map (kbd "C-s") 'ac-isearch)
