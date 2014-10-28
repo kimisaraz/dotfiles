@@ -50,10 +50,6 @@
 ;; ベル音を無効にする
 (setq ring-bell-function 'ignore)
 
-;; 同名バッファの識別文字列を変更する
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
-
 ;; バッファの自動再読み込み
 (global-auto-revert-mode 1)
 
