@@ -1,7 +1,6 @@
 ;; General
 (keyboard-translate ?\C-h ?\C-?) ; C-hと<del>のキーシーケンスを置き換える
 (global-set-key (kbd "C-x ?")   'help-command)
-(global-set-key (kbd "M-o")     'other-window)          ; ex prefix for facemenu-set-*
 (global-set-key (kbd "C-x C-l") 'toggle-truncate-lines) ; ex downcase-region
 (global-set-key (kbd "M-k")     'kill-this-buffer)      ; ex kill-sentence
 (global-set-key (kbd "M-,")     'bs-cycle-next)
@@ -32,3 +31,12 @@
 ;; point-undo
 (global-set-key (kbd "M-[") 'point-undo)
 (global-set-key (kbd "M-]") 'point-redo)
+
+;; Mine
+(global-set-key (kbd "M-K")       'my:pop-killed-file-name-list)
+(global-set-key (kbd "M-o")       'my:other-window-or-split) ; ex prefix for facemenu-set-*
+(global-set-key (kbd "C-w")       'my:kill-region-or-backward-kill-word) ; ex kill-region
+(global-set-key (kbd "M-u")       'my:upcase-region-or-word) ; ex upcase-word
+(global-set-key (kbd "M-l")       'my:downcase-region-or-word) ; ex downcase-word
+(global-set-key (kbd "M-c")       'my:capitalize-region-or-word) ; ex capitalize-word
+(global-set-key (kbd "C-x S-TAB") 'my:indent-whole-buffer)
