@@ -54,3 +54,9 @@
 (defun my:indent-whole-buffer ()
   (interactive)
   (indent-region (point-min) (point-max)))
+
+;; バッファを全体をフォーマット
+(defun my:format-whole-buffer ()
+  (interactive)
+  (delete-trailing-whitespace)
+  (indent-region (point-min) (point-max)))

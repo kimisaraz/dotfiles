@@ -39,4 +39,5 @@
 (global-set-key (kbd "M-u")       'my:upcase-region-or-word) ; ex upcase-word
 (global-set-key (kbd "M-l")       'my:downcase-region-or-word) ; ex downcase-word
 (global-set-key (kbd "M-c")       'my:capitalize-region-or-word) ; ex capitalize-word
+(global-set-key (kbd "C-x TAB")   'my:format-whole-buffer) ; ex indent-rigidly
 (global-set-key (kbd "C-x S-TAB") 'my:indent-whole-buffer)
