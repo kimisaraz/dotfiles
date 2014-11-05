@@ -11,4 +11,5 @@
 (depends-on "popwin")
 (depends-on "molokai-theme")
 (depends-on "undo-tree")
+(depends-on "yaml-mode")
 (depends-on "yascroll")
