@@ -41,3 +41,4 @@
 (global-set-key (kbd "M-c")       'my:capitalize-region-or-word) ; ex capitalize-word
 (global-set-key (kbd "C-x TAB")   'my:format-whole-buffer) ; ex indent-rigidly
 (global-set-key (kbd "C-x S-TAB") 'my:indent-whole-buffer)
+(global-set-key (kbd "M-s s")     'my:search-web-at-point-or-region)
