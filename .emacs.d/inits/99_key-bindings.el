@@ -13,7 +13,6 @@
 
 ;; auto-complete
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete) ; ex completion-at-point
-(define-key ac-complete-mode-map (kbd "C-s") 'ac-isearch)
 
 ;; direx
 (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
