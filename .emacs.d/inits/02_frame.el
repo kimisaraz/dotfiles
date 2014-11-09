@@ -19,15 +19,13 @@
 ;; (display-battery-mode t)
 ;; リージョン内の行数と文字数をモードラインに表示する（範囲指定時のみ）
 ;; http://d.hatena.ne.jp/sonota88/20110224/1298557375
-(defun count-lines-and-chars ()
+(defun my:count-lines-and-chars ()
   (if mark-active
       (format "(%d,%d)"
               (count-lines (region-beginning) (region-end))
               (- (region-end) (region-beginning)))
     ""))
-
-(add-to-list 'default-mode-line-format
-             '(:eval (count-lines-and-chars)))
+(add-to-list 'default-mode-line-format '(:eval (my:count-lines-and-chars)))
 
 ;;; タイトルバーの設定
 ;; %f: ファイルのフルパスを表示
