@@ -17,6 +17,10 @@
 ;; direx
 (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
 
+;; expand-region
+(global-set-key (kbd "C-@")   'er/expand-region) ; ex set-mark-command, cua-set-mark
+(global-set-key (kbd "C-M-@") 'er/contract-region) ; ex mark-sexp
+
 ;; git-gutter+
 (define-key git-gutter+-mode-map (kbd "C-c n") 'git-gutter+-next-hunk)
 (define-key git-gutter+-mode-map (kbd "C-c p") 'git-gutter+-previous-hunk)
