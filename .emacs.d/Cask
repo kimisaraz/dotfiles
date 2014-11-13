@@ -8,6 +8,7 @@
 (depends-on "fuzzy")
 (depends-on "git-commit-mode")
 (depends-on "git-gutter-fringe+")
+(depends-on "git-rebase-mode")
 (depends-on "init-loader")
 (depends-on "point-undo")
 (depends-on "popwin")
