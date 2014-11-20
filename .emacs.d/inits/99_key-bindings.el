@@ -31,6 +31,22 @@
 (define-key git-gutter+-mode-map (kbd "C-c C") 'git-gutter+-stage-and-commit)
 (define-key git-gutter+-mode-map (kbd "C-c U") 'git-gutter+-unstage-whole-buffer)
 
+;; helm
+(global-set-key (kbd "C-_")       'helm-resume)
+(global-set-key (kbd "M-x")       'helm-M-x) ; ex execute-extended-command
+(global-set-key (kbd "M-y")       'helm-show-kill-ring) ; ex yank-pop, cua-paste-pop
+(global-set-key (kbd "C-x b")     'helm-mini) ; ex switch-to-buffer
+(global-set-key (kbd "C-x B")     'helm-buffers-list)
+(global-set-key (kbd "C-x C-f")   'helm-find-files) ; ex find-file, find-file-at-point
+(global-set-key (kbd "C-x C-S-f") 'helm-recentf)
+(global-set-key (kbd "M-s i")     'helm-imenu)
+(global-set-key (kbd "M-s o")     'helm-occur)
+(global-set-key (kbd "C-h a")     'helm-apropos) ; ex apropos-command
+(define-key helm-map (kbd "C-M-n") 'helm-next-source)
+(define-key helm-map (kbd "C-M-p") 'helm-previous-source)
+(define-key helm-map (kbd "C-w")   'backward-kill-word) ; ex helm-yank-text-at-point
+(define-key helm-map (kbd "C-S-w") 'helm-yank-text-at-point)
+
 ;; point-undo
 (global-set-key (kbd "M-[") 'point-undo)
 (global-set-key (kbd "M-]") 'point-redo)
