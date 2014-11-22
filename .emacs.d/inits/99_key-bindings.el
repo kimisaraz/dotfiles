@@ -5,6 +5,9 @@
 (global-set-key (kbd "M-k")     'kill-this-buffer)      ; ex kill-sentence
 (global-set-key (kbd "M-,")     'bs-cycle-next)
 (global-set-key (kbd "M-.")     'bs-cycle-previous)
+(global-set-key (kbd "M-Y")     'cua-paste-pop)
+(global-set-key (kbd "M-s I")   'imenu)
+(global-set-key (kbd "M-s O")   'occur)
 
 ;; anzu
 (global-set-key (kbd "M-%")   'anzu-query-replace) ; ex query-replace
