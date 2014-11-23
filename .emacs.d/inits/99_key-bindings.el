@@ -1,7 +1,6 @@
 ;; General
 (keyboard-translate ?\C-h ?\C-?) ; C-hと<del>のキーシーケンスを置き換える
 (global-set-key (kbd "C-x ?")   'help-command)
-(global-set-key (kbd "C-x C-l") 'toggle-truncate-lines) ; ex downcase-region
 (global-set-key (kbd "M-k")     'kill-this-buffer)      ; ex kill-sentence
 (global-set-key (kbd "M-,")     'bs-cycle-next)
 (global-set-key (kbd "M-.")     'bs-cycle-previous)
@@ -49,6 +48,9 @@
 (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
 (define-key helm-map (kbd "C-w")   'backward-kill-word) ; ex helm-yank-text-at-point
 (define-key helm-map (kbd "C-S-w") 'helm-yank-text-at-point)
+
+;; helm-ls-git
+(global-set-key (kbd "C-x C-l")   'helm-ls-git-ls) ; ex downcase-region
 
 ;; point-undo
 (global-set-key (kbd "M-[") 'point-undo)
