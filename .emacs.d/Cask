@@ -4,6 +4,7 @@
 (depends-on "anzu")
 (depends-on "auto-complete")
 (depends-on "direx")
+(depends-on "diminish")
 (depends-on "expand-region")
 (depends-on "fuzzy")
 (depends-on "git-commit-mode")
