@@ -1,5 +1,11 @@
 (helm-mode 1)
 
+(setq helm-candidate-number-limit 600)
+(setq helm-quick-update t)
+
+(add-to-list 'helm-boring-buffer-regexp-list "\\*Completions\\*")
+(add-to-list 'helm-boring-buffer-regexp-list "\\*Messages\\*")
+
 (set-face-attribute 'helm-source-header nil
                     :height 1.0 :weight 'semi-bold :family nil
                     :foreground "white" :background "gray5")
