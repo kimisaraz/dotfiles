@@ -15,6 +15,7 @@
 (depends-on "init-loader")
 (depends-on "point-undo")
 (depends-on "popwin")
+(depends-on "magit")
 (depends-on "markdown-mode")
 (depends-on "molokai-theme")
 (depends-on "search-web")

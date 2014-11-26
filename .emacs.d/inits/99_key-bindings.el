@@ -52,6 +52,9 @@
 ;; helm-ls-git
 (global-set-key (kbd "C-x C-l")   'helm-ls-git-ls) ; ex downcase-region
 
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; point-undo
 (global-set-key (kbd "M-[") 'point-undo)
 (global-set-key (kbd "M-]") 'point-redo)
