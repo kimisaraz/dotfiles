@@ -20,6 +20,7 @@
 (depends-on "markdown-mode")
 (depends-on "molokai-theme")
 (depends-on "search-web")
+(depends-on "smartparens")
 (depends-on "undo-tree")
 (depends-on "yaml-mode")
 (depends-on "yascroll")

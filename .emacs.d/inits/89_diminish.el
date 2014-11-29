@@ -1,4 +1,5 @@
 (diminish 'anzu-mode)
 (diminish 'git-gutter+-mode)
 (diminish 'helm-mode)
+(diminish 'smartparens-mode)
 (diminish 'undo-tree-mode)
