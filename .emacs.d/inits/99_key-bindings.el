@@ -59,6 +59,10 @@
 (global-set-key (kbd "M-[") 'point-undo)
 (global-set-key (kbd "M-]") 'point-redo)
 
+;; smartparens
+(define-key sp-keymap (kbd "C-M-f") 'sp-forward-sexp) ; ex forward-sexp
+(define-key sp-keymap (kbd "C-M-b") 'sp-backward-sexp) ; ex backward-sexp
+
 ;; Mine
 (global-set-key (kbd "M-K")       'my:pop-killed-file-name-list)
 (global-set-key (kbd "M-o")       'my:other-window-or-split) ; ex prefix for facemenu-set-*
