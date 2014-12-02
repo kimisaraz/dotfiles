@@ -28,7 +28,7 @@
 (define-key git-gutter+-mode-map (kbd "C-c p") 'git-gutter+-previous-hunk)
 (define-key git-gutter+-mode-map (kbd "C-c d") 'git-gutter+-show-hunk)
 (define-key git-gutter+-mode-map (kbd "C-c r") 'git-gutter+-revert-hunks)
-(define-key git-gutter+-mode-map (kbd "C-c a") 'git-gutter+-stage-hunks)
+(define-key git-gutter+-mode-map (kbd "C-c s") 'git-gutter+-stage-hunks)
 (define-key git-gutter+-mode-map (kbd "C-c c") 'git-gutter+-commit)
 (define-key git-gutter+-mode-map (kbd "C-c C") 'git-gutter+-stage-and-commit)
 (define-key git-gutter+-mode-map (kbd "C-c U") 'git-gutter+-unstage-whole-buffer)
