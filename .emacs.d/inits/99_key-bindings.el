@@ -1,7 +1,7 @@
 ;; General
-(keyboard-translate ?\C-h ?\C-?) ; C-hと<del>のキーシーケンスを置き換える
+(keyboard-translate ?\C-h ?\C-?) ; C-hをバックスペースにする
 (global-set-key (kbd "C-x ?")   'help-command)
-(global-set-key (kbd "M-k")     'kill-this-buffer)      ; ex kill-sentence
+(global-set-key (kbd "M-k")     'kill-this-buffer) ; was kill-sentence
 (global-set-key (kbd "M-,")     'bs-cycle-next)
 (global-set-key (kbd "M-.")     'bs-cycle-previous)
 (global-set-key (kbd "M-Y")     'cua-paste-pop)
@@ -9,19 +9,19 @@
 (global-set-key (kbd "M-s O")   'occur)
 
 ;; anzu
-(global-set-key (kbd "M-%")   'anzu-query-replace) ; ex query-replace
-(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp) ; ex query-replace-regexp
+(global-set-key (kbd "M-%")   'anzu-query-replace) ; was query-replace
+(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp) ; was query-replace-regexp
 (global-set-key (kbd "C-%")   'anzu-replace-at-cursor-thing)
 
 ;; auto-complete
-(define-key ac-mode-map (kbd "M-TAB") 'auto-complete) ; ex completion-at-point
+(define-key ac-mode-map (kbd "M-TAB") 'auto-complete) ; was completion-at-point
 
 ;; direx
 (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
 
 ;; expand-region
-(global-set-key (kbd "C-@")   'er/expand-region) ; ex set-mark-command, cua-set-mark
-(global-set-key (kbd "C-M-@") 'er/contract-region) ; ex mark-sexp
+(global-set-key (kbd "C-@")   'er/expand-region) ; was set-mark-command, cua-set-mark
+(global-set-key (kbd "C-M-@") 'er/contract-region) ; was mark-sexp
 
 ;; git-gutter+
 (define-key git-gutter+-mode-map (kbd "C-c n") 'git-gutter+-next-hunk)
@@ -35,22 +35,22 @@
 
 ;; helm
 (global-set-key (kbd "C-_")       'helm-resume)
-(global-set-key (kbd "M-x")       'helm-M-x) ; ex execute-extended-command
-(global-set-key (kbd "M-y")       'helm-show-kill-ring) ; ex yank-pop, cua-paste-pop
-(global-set-key (kbd "C-x b")     'helm-mini) ; ex switch-to-buffer
+(global-set-key (kbd "M-x")       'helm-M-x) ; was execute-extended-command
+(global-set-key (kbd "M-y")       'helm-show-kill-ring) ; was yank-pop, cua-paste-pop
+(global-set-key (kbd "C-x b")     'helm-mini) ; was switch-to-buffer
 (global-set-key (kbd "C-x B")     'helm-buffers-list)
-(global-set-key (kbd "C-x C-f")   'helm-find-files) ; ex find-file, find-file-at-point
+(global-set-key (kbd "C-x C-f")   'helm-find-files) ; was find-file, find-file-at-point
 (global-set-key (kbd "C-x C-S-f") 'helm-recentf)
 (global-set-key (kbd "M-s i")     'helm-imenu)
 (global-set-key (kbd "M-s o")     'helm-occur)
-(global-set-key (kbd "C-h a")     'helm-apropos) ; ex apropos-command
+(global-set-key (kbd "C-h a")     'helm-apropos) ; was apropos-command
 (define-key helm-map (kbd "C-M-n") 'helm-next-source)
 (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
-(define-key helm-map (kbd "C-w")   'backward-kill-word) ; ex helm-yank-text-at-point
+(define-key helm-map (kbd "C-w")   'backward-kill-word) ; was helm-yank-text-at-point
 (define-key helm-map (kbd "C-S-w") 'helm-yank-text-at-point)
 
 ;; helm-ls-git
-(global-set-key (kbd "C-x C-l")   'helm-ls-git-ls) ; ex downcase-region
+(global-set-key (kbd "C-x C-l")   'helm-ls-git-ls) ; was downcase-region
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -60,16 +60,16 @@
 (global-set-key (kbd "M-]") 'point-redo)
 
 ;; smartparens
-(define-key sp-keymap (kbd "C-M-f") 'sp-forward-sexp) ; ex forward-sexp
-(define-key sp-keymap (kbd "C-M-b") 'sp-backward-sexp) ; ex backward-sexp
+(define-key sp-keymap (kbd "C-M-f") 'sp-forward-sexp) ; was forward-sexp
+(define-key sp-keymap (kbd "C-M-b") 'sp-backward-sexp) ; was backward-sexp
 
 ;; Mine
 (global-set-key (kbd "M-K")       'my:pop-killed-file-name-list)
-(global-set-key (kbd "M-o")       'my:other-window-or-split) ; ex prefix for facemenu-set-*
-(global-set-key (kbd "C-w")       'my:kill-region-or-backward-kill-word) ; ex kill-region
-(global-set-key (kbd "M-u")       'my:upcase-region-or-word) ; ex upcase-word
-(global-set-key (kbd "M-l")       'my:downcase-region-or-word) ; ex downcase-word
-(global-set-key (kbd "M-c")       'my:capitalize-region-or-word) ; ex capitalize-word
-(global-set-key (kbd "C-x TAB")   'my:format-whole-buffer) ; ex indent-rigidly
+(global-set-key (kbd "M-o")       'my:other-window-or-split) ; was prefix for facemenu-set-*
+(global-set-key (kbd "C-w")       'my:kill-region-or-backward-kill-word) ; was kill-region
+(global-set-key (kbd "M-u")       'my:upcase-region-or-word) ; was upcase-word
+(global-set-key (kbd "M-l")       'my:downcase-region-or-word) ; was downcase-word
+(global-set-key (kbd "M-c")       'my:capitalize-region-or-word) ; was capitalize-word
+(global-set-key (kbd "C-x TAB")   'my:format-whole-buffer) ; was indent-rigidly
 (global-set-key (kbd "C-x S-TAB") 'my:indent-whole-buffer)
 (global-set-key (kbd "M-s s")     'my:search-web-at-point-or-region)
