@@ -73,3 +73,4 @@
 (global-set-key (kbd "C-x TAB")   'my:format-whole-buffer) ; was indent-rigidly
 (global-set-key (kbd "C-x S-TAB") 'my:indent-whole-buffer)
 (global-set-key (kbd "M-s s")     'my:search-web-at-point-or-region)
+(global-set-key (kbd "M-s M-s")   'my:search-web-at-point-or-region)
