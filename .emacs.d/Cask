@@ -3,6 +3,7 @@
 
 (depends-on "anzu")
 (depends-on "auto-complete")
+(depends-on "coffee-mode")
 (depends-on "direx")
 (depends-on "diminish")
 (depends-on "expand-region")
