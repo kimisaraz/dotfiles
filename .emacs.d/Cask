@@ -21,6 +21,7 @@
 (depends-on "magit")
 (depends-on "markdown-mode")
 (depends-on "molokai-theme")
+(depends-on "sass-mode")
 (depends-on "search-web")
 (depends-on "smartparens")
 (depends-on "undo-tree")
