@@ -4,4 +4,5 @@
 (diminish 'smartparens-mode)
 (diminish 'undo-tree-mode)
 
+(eval-after-load "eldoc" '(diminish 'eldoc-mode))
 (eval-after-load "magit" '(diminish 'magit-auto-revert-mode))
