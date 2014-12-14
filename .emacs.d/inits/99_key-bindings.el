@@ -55,6 +55,9 @@
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; org
+(global-set-key (kbd "C-c l") 'org-store-link)
+
 ;; point-undo
 (global-set-key (kbd "M-[") 'point-undo)
 (global-set-key (kbd "M-]") 'point-redo)
