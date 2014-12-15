@@ -17,7 +17,7 @@
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete) ; was completion-at-point
 
 ;; direx
-(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
+(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window) ; was dired-jump
 
 ;; expand-region
 (global-set-key (kbd "C-@")   'er/expand-region) ; was set-mark-command, cua-set-mark
