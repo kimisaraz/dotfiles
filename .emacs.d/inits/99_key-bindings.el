@@ -1,12 +1,13 @@
 ;; General
 (keyboard-translate ?\C-h ?\C-?) ; C-hをバックスペースにする
-(global-set-key (kbd "C-x ?")   'help-command)
-(global-set-key (kbd "M-k")     'kill-this-buffer) ; was kill-sentence
-(global-set-key (kbd "M-,")     'bs-cycle-next)
-(global-set-key (kbd "M-.")     'bs-cycle-previous)
-(global-set-key (kbd "M-Y")     'cua-paste-pop)
-(global-set-key (kbd "M-s I")   'imenu)
-(global-set-key (kbd "M-s O")   'occur)
+(global-set-key (kbd "C-x ?")     'help-command)
+(global-set-key (kbd "C-x C-S-j") 'dired-jump)
+(global-set-key (kbd "M-k")       'kill-this-buffer) ; was kill-sentence
+(global-set-key (kbd "M-,")       'bs-cycle-next)
+(global-set-key (kbd "M-.")       'bs-cycle-previous)
+(global-set-key (kbd "M-Y")       'cua-paste-pop)
+(global-set-key (kbd "M-s I")     'imenu)
+(global-set-key (kbd "M-s O")     'occur)
 
 ;; anzu
 (global-set-key (kbd "M-%")   'anzu-query-replace) ; was query-replace
