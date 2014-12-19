@@ -3,6 +3,7 @@
 (setq helm-candidate-number-limit 600)
 (setq helm-quick-update t)
 
+(add-to-list 'helm-boring-buffer-regexp-list "\\*scratch\\*")
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Completions\\*")
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Messages\\*")
 
