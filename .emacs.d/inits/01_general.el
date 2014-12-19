@@ -57,3 +57,6 @@
 (savehist-mode 1)
 (setq history-length 500)
 (setq history-delete-duplicates t)
+
+;;; *scratch*バッファの初期メッセージを非表示にする
+(setq initial-scratch-message nil)
