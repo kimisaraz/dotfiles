@@ -56,6 +56,9 @@
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; open-junk-file
+(global-set-key (kbd "C-x j") 'open-junk-file)
+
 ;; org
 (global-set-key (kbd "C-c l") 'org-store-link)
 
