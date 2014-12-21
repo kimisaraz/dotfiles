@@ -25,14 +25,14 @@
 (global-set-key (kbd "C-M-@") 'er/contract-region) ; was mark-sexp
 
 ;; git-gutter+
-(define-key git-gutter+-mode-map (kbd "C-c n") 'git-gutter+-next-hunk)
-(define-key git-gutter+-mode-map (kbd "C-c p") 'git-gutter+-previous-hunk)
-(define-key git-gutter+-mode-map (kbd "C-c d") 'git-gutter+-show-hunk)
-(define-key git-gutter+-mode-map (kbd "C-c r") 'git-gutter+-revert-hunks)
-(define-key git-gutter+-mode-map (kbd "C-c s") 'git-gutter+-stage-hunks)
-(define-key git-gutter+-mode-map (kbd "C-c c") 'git-gutter+-commit)
-(define-key git-gutter+-mode-map (kbd "C-c C") 'git-gutter+-stage-and-commit)
-(define-key git-gutter+-mode-map (kbd "C-c U") 'git-gutter+-unstage-whole-buffer)
+(define-key git-gutter+-mode-map (kbd "C-c g n") 'git-gutter+-next-hunk)
+(define-key git-gutter+-mode-map (kbd "C-c g p") 'git-gutter+-previous-hunk)
+(define-key git-gutter+-mode-map (kbd "C-c g d") 'git-gutter+-show-hunk)
+(define-key git-gutter+-mode-map (kbd "C-c g r") 'git-gutter+-revert-hunks)
+(define-key git-gutter+-mode-map (kbd "C-c g s") 'git-gutter+-stage-hunks)
+(define-key git-gutter+-mode-map (kbd "C-c g c") 'git-gutter+-commit)
+(define-key git-gutter+-mode-map (kbd "C-c g C") 'git-gutter+-stage-and-commit)
+(define-key git-gutter+-mode-map (kbd "C-c g U") 'git-gutter+-unstage-whole-buffer)
 
 ;; helm
 (global-set-key (kbd "C-_")       'helm-resume)
