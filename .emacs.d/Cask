@@ -1,5 +1,6 @@
 (source gnu)
 (source melpa)
+(source org)
 
 (depends-on "anzu")
 (depends-on "auto-complete")
@@ -16,6 +17,7 @@
 (depends-on "helm")
 (depends-on "helm-ls-git")
 (depends-on "init-loader")
+(depends-on "org-plus-contrib")
 (depends-on "point-undo")
 (depends-on "popwin")
 (depends-on "magit")
