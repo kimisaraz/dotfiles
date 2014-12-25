@@ -4,6 +4,7 @@
 (setq helm-quick-update t)
 
 (add-to-list 'helm-boring-buffer-regexp-list "\\*scratch\\*")
+(add-to-list 'helm-boring-buffer-regexp-list "\\*Calendar\\*")
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Completions\\*")
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Messages\\*")
 
