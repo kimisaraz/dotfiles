@@ -65,3 +65,8 @@
 (defun my:insert-today()
   (interactive)
   (insert (format-time-string "%Y-%m-%d" (current-time))))
+
+;; 現在時刻を入力
+(defun my:insert-now()
+  (interactive)
+  (insert (format-time-string "%H:%M:%S" (current-time))))
