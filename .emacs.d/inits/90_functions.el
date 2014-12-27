@@ -60,3 +60,8 @@
   (interactive)
   (indent-region (point-min) (point-max))
   (delete-trailing-whitespace))
+
+;; 現在日付を入力
+(defun my:insert-today()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d" (current-time))))
