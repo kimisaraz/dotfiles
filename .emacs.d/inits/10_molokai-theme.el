@@ -10,4 +10,5 @@
  '(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
  '(isearch ((t (:foreground "Black" :background "Gray" :weight bold))))
  '(isearch-fail ((t (:foreground "Black" :background "OrangeRed"))))
- '(lazy-highlight ((t (:inherit isearch :weight normal)))))
+ '(lazy-highlight ((t (:inherit isearch :weight normal))))
+ '(trailing-whitespace ((t (:background "OrangeRed")))))
