@@ -66,6 +66,9 @@
 (global-set-key (kbd "M-[") 'point-undo)
 (global-set-key (kbd "M-]") 'point-redo)
 
+;; popwin
+(global-set-key (kbd "C-^") popwin:keymap)
+
 ;; smartparens
 (define-key sp-keymap (kbd "C-M-f") 'sp-forward-sexp) ; was forward-sexp
 (define-key sp-keymap (kbd "C-M-b") 'sp-backward-sexp) ; was backward-sexp
