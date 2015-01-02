@@ -6,6 +6,7 @@
 (add-to-list 'helm-boring-buffer-regexp-list "\\*scratch\\*")
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Calendar\\*")
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Completions\\*")
+(add-to-list 'helm-boring-buffer-regexp-list "\\*Help\\*")
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Messages\\*")
 
 (set-face-attribute 'helm-source-header nil
