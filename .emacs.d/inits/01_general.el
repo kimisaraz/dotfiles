@@ -26,8 +26,7 @@
 ;; (set-face-underline-p  'show-paren-match-face "yellow")
 
 ;;; バックアップとオートセーブの設定
-;; バックアップとオートセーブファイルを~/.emacs.d/backups/へ集める
-(defvar my:backup-directory (expand-file-name "backups/" user-emacs-directory))
+;; バックアップとオートセーブファイルをmy:backup-directoryへ集める
 (add-to-list 'backup-directory-alist (cons "." my:backup-directory))
 (setq auto-save-file-name-transforms `((".*", my:backup-directory t)))
 ;; オートセーブファイル作成までの秒間隔
