@@ -10,6 +10,15 @@
   (sp-local-pair "『" "』")
   (sp-local-pair "【" "】"))
 
+(sp-with-modes '(org-mode)
+  (sp-local-tag "*" "*" "*")
+  (sp-local-tag "/" "/" "/")
+  (sp-local-tag "_" "_" "_")
+  (sp-local-tag "=" "=" "=")
+  (sp-local-tag "~" "~" "~")
+  (sp-local-tag "+" "+" "+")
+  (sp-local-tag "<" "<" ">"))
+
 (sp-with-modes '(markdown-mode gfm-mode)
   (sp-local-tag "#" "# " " #"))
 
