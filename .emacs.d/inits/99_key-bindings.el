@@ -35,6 +35,7 @@
 (define-key git-gutter+-mode-map (kbd "C-c g U") 'git-gutter+-unstage-whole-buffer)
 
 ;; helm
+(global-set-key (kbd "C-;")       'helm-mini)
 (global-set-key (kbd "C-_")       'helm-resume)
 (global-set-key (kbd "M-x")       'helm-M-x) ; was execute-extended-command
 (global-set-key (kbd "M-y")       'helm-show-kill-ring) ; was yank-pop, cua-paste-pop
