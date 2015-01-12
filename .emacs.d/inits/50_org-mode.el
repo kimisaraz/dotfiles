@@ -11,3 +11,11 @@
 ;;; Tasks
 ;; 完了状態になった時、CLOSEDタイムスタンプを付与する
 (setq org-log-done 'time)
+
+;;; Babel
+;; http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-dot.html
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((dot . t)
+   (emacs-lisp . t)))
+
