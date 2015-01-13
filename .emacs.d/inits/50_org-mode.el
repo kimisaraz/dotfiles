@@ -19,3 +19,7 @@
  '((dot . t)
    (emacs-lisp . t)))
 
+;; http://orgmode.org/manual/Code-evaluation-security.html#Code-evaluation-security
+(defun my:org-confirm-babel-evaluate (lang body)
+  (not (string= lang "dot")))
+(setq org-confirm-babel-evaluate 'my:org-confirm-babel-evaluate)
