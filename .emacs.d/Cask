@@ -13,6 +13,7 @@
 (depends-on "git-commit-mode")
 (depends-on "git-gutter-fringe+")
 (depends-on "git-rebase-mode")
+(depends-on "graphviz-dot-mode")
 (depends-on "haml-mode")
 (depends-on "helm")
 (depends-on "helm-ls-git")
