@@ -23,3 +23,5 @@
 (defun my:org-confirm-babel-evaluate (lang body)
   (not (string= lang "dot")))
 (setq org-confirm-babel-evaluate 'my:org-confirm-babel-evaluate)
+
+(add-to-list 'org-src-lang-modes '("dot" . graphviz-dot))
