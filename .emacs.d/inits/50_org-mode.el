@@ -25,3 +25,6 @@
 (setq org-confirm-babel-evaluate 'my:org-confirm-babel-evaluate)
 
 (add-to-list 'org-src-lang-modes '("dot" . graphviz-dot))
+
+;;; Export
+(setq org-export-with-sub-superscripts nil)
