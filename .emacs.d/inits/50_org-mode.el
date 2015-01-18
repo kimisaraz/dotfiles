@@ -4,6 +4,10 @@
 
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
 
+;;; Capture
+;; Default target for storing notes
+(setq org-default-notes-file (concat org-directory "tasks.org"))
+
 ;;; Agenda
 ;; The files to be used for agenda display
 (setq org-agenda-files (list org-directory))
