@@ -8,6 +8,22 @@
 ;; Default target for storing notes
 (setq org-default-notes-file (concat org-directory "tasks.org"))
 
+;; Capture templates
+(setq org-capture-templates
+      '(("t" "Tasks" entry
+         (file+headline (concat org-directory "tasks.org") "Inbox")
+         "* TODO %?\n  %i")
+        ("T" "Tasks (with timestamp)" entry
+         (file+headline (concat org-directory "tasks.org") "Inbox")
+         "* TODO %?\n  %U\n  %i\n  %a")
+        ("j" "Journal" entry
+         (file+datetree (concat org-directory "journal.org"))
+         "* %?\n  %i")
+        ("J" "Journal (with timestamp and annotation)" entry
+         (file+datetree (concat org-directory "journal.org"))
+         "* %?\n  %U\n  %i\n  %a"))
+      )
+
 ;;; Agenda
 ;; The files to be used for agenda display
 (setq org-agenda-files (list org-directory))
