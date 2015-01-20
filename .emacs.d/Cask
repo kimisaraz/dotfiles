@@ -30,6 +30,7 @@
 (depends-on "scss-mode")
 (depends-on "search-web")
 (depends-on "smartparens")
+(depends-on "string-inflection")
 (depends-on "undo-tree")
 (depends-on "yaml-mode")
 (depends-on "yascroll")
