@@ -77,6 +77,11 @@
 (define-key sp-keymap (kbd "C-M-f") 'sp-forward-sexp) ; was forward-sexp
 (define-key sp-keymap (kbd "C-M-b") 'sp-backward-sexp) ; was backward-sexp
 
+;; string-inflection
+(global-set-key (kbd "M-U") 'string-inflection-upcase)
+(global-set-key (kbd "M-L") 'string-inflection-underscore)
+(global-set-key (kbd "M-C") 'string-inflection-camelcase)
+
 ;; Mine
 (global-set-key (kbd "M-K")       'my:pop-killed-file-name-list)
 (global-set-key (kbd "M-o")       'my:other-window-or-split) ; was prefix for facemenu-set-*
