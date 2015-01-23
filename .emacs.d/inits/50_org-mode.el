@@ -46,5 +46,8 @@
 
 (add-to-list 'org-src-lang-modes '("dot" . graphviz-dot))
 
+;; Fontify code in code blocks
+(setq org-src-fontify-natively t)
+
 ;;; Export
 (setq org-export-with-sub-superscripts nil)
