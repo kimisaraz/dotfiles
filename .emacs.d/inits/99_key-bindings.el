@@ -65,6 +65,8 @@
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c C-l") 'org-insert-link-global)
+(global-set-key (kbd "C-c C-o") 'org-open-at-point-global)
 
 ;; point-undo
 (global-set-key (kbd "M-[") 'point-undo)
