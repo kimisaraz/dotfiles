@@ -35,6 +35,8 @@
 (setq auto-save-interval 150) ; 初期値は300
 
 ;;; cua-modeの矩形編集を利用
+;; cua-set-rectangle-markのデフォルトキーバインド(<C-return>)を無効にする
+(setq cua-rectangle-mark-key [])
 ;; cua-modeをオン
 (cua-mode t)
 ;; CUAキーバインドを無効にする
