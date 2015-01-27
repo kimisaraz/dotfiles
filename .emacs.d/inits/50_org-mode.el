@@ -32,6 +32,10 @@
 ;; 完了状態になった時、CLOSEDタイムスタンプを付与する
 (setq org-log-done 'time)
 
+;; Enable org-habit
+;; http://orgmode.org/manual/Tracking-your-habits.html
+(add-to-list 'org-modules 'org-habit)
+
 ;;; Babel
 ;; http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-dot.html
 (org-babel-do-load-languages
