@@ -32,6 +32,9 @@
 ;; 完了状態になった時、CLOSEDタイムスタンプを付与する
 (setq org-log-done 'time)
 
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "|" "DONE(d)")))
+
 ;; 依存タスクが完了していない場合、DONE状態への変更をブロックする
 (setq org-enforce-todo-dependencies t)
 
