@@ -26,7 +26,7 @@
 
 ;;; Agenda
 ;; The files to be used for agenda display
-(setq org-agenda-files (list (concat org-directory "tasks.org")))
+(setq org-agenda-files (list (concat org-directory "agenda")))
 
 ;;; Tasks
 ;; 完了状態になった時、CLOSEDタイムスタンプを付与する
