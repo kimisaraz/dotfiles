@@ -38,6 +38,9 @@
 ;; 依存タスクが完了していない場合、DONE状態への変更をブロックする
 (setq org-enforce-todo-dependencies t)
 
+;; 未完了のチェックボックスを持つエントリーがDONE状態になるのをブロックする
+(setq org-enforce-todo-checkbox-dependencies t)
+
 ;; Enable org-habit
 ;; http://orgmode.org/manual/Tracking-your-habits.html
 (add-to-list 'org-modules 'org-habit)
