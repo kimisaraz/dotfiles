@@ -6,15 +6,15 @@
 
 ;;; Capture
 ;; Default target for storing notes
-(setq org-default-notes-file (concat org-directory "tasks.org"))
+(setq org-default-notes-file (concat org-directory "agenda/tasks.org"))
 
 ;; Capture templates
 (setq org-capture-templates
       '(("t" "Tasks" entry
-         (file+headline (concat org-directory "tasks.org") "Inbox")
+         (file+headline (concat org-directory "agenda/tasks.org") "Inbox")
          "* TODO %?\n  %i")
         ("T" "Tasks (with timestamp)" entry
-         (file+headline (concat org-directory "tasks.org") "Inbox")
+         (file+headline (concat org-directory "agenda/tasks.org") "Inbox")
          "* TODO %?\n  %U\n  %i\n  %a")
         ("j" "Journal" entry
          (file+datetree (concat org-directory "journal.org"))
