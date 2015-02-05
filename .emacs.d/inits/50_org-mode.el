@@ -46,6 +46,10 @@
 ;; http://orgmode.org/manual/Tracking-your-habits.html
 (add-to-list 'org-modules 'org-habit)
 
+;;; Tags
+;; タグ列
+(setq org-tags-column -80)
+
 ;;; Babel
 ;; http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-dot.html
 (org-babel-do-load-languages
