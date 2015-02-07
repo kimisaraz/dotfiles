@@ -28,6 +28,9 @@
 ;; The files to be used for agenda display
 (setq org-agenda-files (list (concat org-directory "agenda")))
 
+;; 時間表示が1桁のとき、0埋めで表示する
+(setq org-agenda-time-leading-zero t)
+
 ;;; Tasks
 ;; 完了状態になった時、CLOSEDタイムスタンプを付与する
 (setq org-log-done 'time)
