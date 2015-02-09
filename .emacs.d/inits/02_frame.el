@@ -22,7 +22,7 @@
 (setq display-time-format "%m/%d(%a) %H:%M")
 (display-time-mode t)
 ;; バッテリー残量を表示
-;; (display-battery-mode t)
+(display-battery-mode t)
 ;; リージョン内の行数と文字数をモードラインに表示する(範囲指定時のみ)
 ;; http://d.hatena.ne.jp/sonota88/20110224/1298557375
 (defun my:count-lines-and-chars ()
