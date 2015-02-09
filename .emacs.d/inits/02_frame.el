@@ -11,6 +11,9 @@
 ;; %*: バッファが読み出し専用であれば%, 変更されていれば*, それ以外は-を表示
 (setq frame-title-format "%f%*")
 
+;;; カーソルの点滅を止めない
+(setq blink-cursor-blinks 0)
+
 ;;; モードラインに関する設定
 ;; カラム番号も表示
 (column-number-mode t)
