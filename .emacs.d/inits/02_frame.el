@@ -1,9 +1,15 @@
+;;; バーの表示設定
 ;; scroll-barを非表示
 (scroll-bar-mode 0)
 ;; tool-barを非表示
 (tool-bar-mode 0)
 ;; menu-barを非表示
 (menu-bar-mode 0)
+
+;;; タイトルバーの設定
+;; %f: ファイルのフルパスを表示
+;; %*: バッファが読み出し専用であれば%, 変更されていれば*, それ以外は-を表示
+(setq frame-title-format "%f%*")
 
 ;;; モードラインに関する設定
 ;; カラム番号も表示
@@ -17,7 +23,7 @@
 (display-time-mode t)
 ;; バッテリー残量を表示
 ;; (display-battery-mode t)
-;; リージョン内の行数と文字数をモードラインに表示する（範囲指定時のみ）
+;; リージョン内の行数と文字数をモードラインに表示する(範囲指定時のみ)
 ;; http://d.hatena.ne.jp/sonota88/20110224/1298557375
 (defun my:count-lines-and-chars ()
   (if mark-active
@@ -26,8 +32,3 @@
               (- (region-end) (region-beginning)))
     ""))
 (add-to-list 'default-mode-line-format '(:eval (my:count-lines-and-chars)))
-
-;;; タイトルバーの設定
-;; %f: ファイルのフルパスを表示
-;; %*: バッファが読み出し専用であれば%, 変更されていれば*, それ以外は-を表示
-(setq frame-title-format "%f%*")
