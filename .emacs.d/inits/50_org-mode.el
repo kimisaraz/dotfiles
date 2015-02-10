@@ -35,6 +35,9 @@
 ;; 完了状態になった時、CLOSEDタイムスタンプを付与する
 (setq org-log-done 'time)
 
+;; 状態の変化をLOGBOOK drawerに保存する
+(setq org-log-into-drawer t)
+
 (setq org-todo-keywords
       '((sequence "TODO(t)" "|" "DONE(d)")
         (sequence "|" "CANCELED(c)")))
