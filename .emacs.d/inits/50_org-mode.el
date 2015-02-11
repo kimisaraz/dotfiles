@@ -59,7 +59,7 @@
 ;;; Properties
 ;; グローバルプロパティの定義
 (setq org-global-properties
-      '(("Rating_ALL". "1 2 3 4 5")))
+      '(("rating_ALL". "1 2 3 4 5")))
 
 ;;; Babel
 ;; http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-dot.html
