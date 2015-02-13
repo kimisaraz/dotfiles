@@ -59,7 +59,8 @@
 ;;; Properties
 ;; グローバルプロパティの定義
 (setq org-global-properties
-      '(("rating_ALL". "1 2 3 4 5")))
+      '(("rating_ALL". "1 2 3 4 5")
+        ("STYLE_ALL". "habit")))
 
 ;;; Babel
 ;; http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-dot.html
