@@ -31,6 +31,9 @@
 ;; 時間表示が1桁のとき、0埋めで表示する
 (setq org-agenda-time-leading-zero t)
 
+;; アジェンダを閉じた後、windowの構成を表示前に戻す
+(setq org-agenda-restore-windows-after-quit t)
+
 ;;; Tasks
 ;; 完了状態になった時、CLOSEDタイムスタンプを付与する
 (setq org-log-done 'time)
