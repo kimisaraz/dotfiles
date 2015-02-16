@@ -28,6 +28,9 @@
 ;; The files to be used for agenda display
 (setq org-agenda-files (list (concat org-directory "agenda")))
 
+;; デフォルトで表示する日数
+;; (setq org-agenda-span 'week)
+
 ;; 時間表示が1桁のとき、0埋めで表示する
 (setq org-agenda-time-leading-zero t)
 
