@@ -3,6 +3,9 @@
 ;; スタートアップメッセージを非表示
 (setq inhibit-startup-screen t)
 
+;; Emacsの終了時に確認する
+(setq confirm-kill-emacs 'y-or-n-p)
+
 ;;; パスの設定
 (add-to-list 'exec-path "/usr/local/bin")
 
