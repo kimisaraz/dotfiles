@@ -17,6 +17,8 @@
 
 ;; auto-complete
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete) ; was completion-at-point
+(define-key ac-menu-map (kbd "C-n") 'next-line) ; was ac-next
+(define-key ac-menu-map (kbd "C-p") 'previous-line) ; was ac-previous
 
 ;; direx
 (global-set-key (kbd "C-x C-j") 'my:direx-jump-to-project-root-other-window) ; was dired-jump
