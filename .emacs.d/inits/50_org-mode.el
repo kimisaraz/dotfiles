@@ -37,6 +37,10 @@
 ;; アジェンダを閉じた後、windowの構成を表示前に戻す
 (setq org-agenda-restore-windows-after-quit t)
 
+;; 完了状態のスケジュールやデッドラインは表示しない
+(setq org-agenda-skip-scheduled-if-done t)
+(setq org-agenda-skip-deadline-if-done t)
+
 ;;; Tasks
 ;; 完了状態になった時、CLOSEDタイムスタンプを付与する
 (setq org-log-done 'time)
