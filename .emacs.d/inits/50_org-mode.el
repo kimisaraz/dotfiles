@@ -65,7 +65,7 @@
 
 ;;; Tags
 ;; タグ列
-(setq org-tags-column -80)
+(setq org-tags-column -90)
 
 ;;; Properties
 ;; グローバルプロパティの定義
