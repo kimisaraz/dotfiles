@@ -11,10 +11,10 @@
 ;; Capture templates
 (setq org-capture-templates
       '(("t" "Tasks" entry
-         (file+headline nil "Inbox")
+         (file+headline nil "Task")
          "* TODO %?\n  %i")
         ("T" "Tasks (with timestamp)" entry
-         (file+headline nil "Inbox")
+         (file+headline nil "Task")
          "* TODO %?\n  %U\n  %i\n  %a")
         ("j" "Journal" entry
          (file+datetree (concat org-directory "journal.org"))
