@@ -16,6 +16,9 @@
         ("T" "Tasks (with timestamp)" entry
          (file+headline nil "Task")
          "* TODO %?\n  %U\n  %i\n  %a")
+        ("i" "Inbox" entry
+         (file+headline nil "Task")
+         "* INBOX %?\n  %i")
         ("j" "Journal" entry
          (file+datetree (concat org-directory "journal.org"))
          "* %?\n  %i")
