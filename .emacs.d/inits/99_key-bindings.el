@@ -1,6 +1,5 @@
 ;; General
 (keyboard-translate ?\C-h ?\C-?) ; C-hをバックスペースにする
-(global-set-key (kbd "C-x ?")          'help-command)
 (global-set-key (kbd "C-x C-S-j")      'dired-jump)
 (global-set-key (kbd "C-x <C-return>") 'cua-set-rectangle-mark)
 (global-set-key (kbd "M-k")            'kill-this-buffer) ; was kill-sentence
