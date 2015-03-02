@@ -44,6 +44,9 @@
 (setq org-agenda-skip-scheduled-if-done t)
 (setq org-agenda-skip-deadline-if-done t)
 
+;; 日記ファイル
+(setq org-agenda-diary-file (concat org-directory "diary.org"))
+
 ;;; Tasks
 ;; 完了状態になった時、CLOSEDタイムスタンプを付与する
 (setq org-log-done 'time)
