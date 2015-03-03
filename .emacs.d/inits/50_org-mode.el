@@ -22,9 +22,9 @@
         ("j" "Journal" entry
          (file+datetree (concat org-directory "journal.org"))
          "* %?\n  %i")
-        ("J" "Journal (with timestamp and annotation)" entry
-         (file+datetree (concat org-directory "journal.org"))
-         "* %?\n  %U\n  %i\n  %a"))
+        ("J" "Journal (with prompt)" entry
+         (file+datetree+prompt (concat org-directory "journal.org"))
+         "* %?\n  %i"))
       )
 
 ;;; Agenda
