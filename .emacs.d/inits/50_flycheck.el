@@ -1,6 +1,13 @@
 (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
 
+(add-hook 'coffee-mode-hook 'flycheck-mode)
 (add-hook 'css-mode-hook 'flycheck-mode)
 (add-hook 'emacs-lisp-mode-hook 'flycheck-mode)
+(add-hook 'haml-mode-hook 'flycheck-mode)
+(add-hook 'html-mode-hook 'flycheck-mode)
 (add-hook 'js-mode-hook 'flycheck-mode)
 (add-hook 'ruby-mode-hook 'flycheck-mode)
+(add-hook 'sass-mode-hook 'flycheck-mode)
+(add-hook 'scss-mode-hook 'flycheck-mode)
+(add-hook 'xml-mode-hook 'flycheck-mode)
+(add-hook 'yaml-mode-hook 'flycheck-mode)
