@@ -70,6 +70,9 @@
 (add-to-list 'org-modules 'org-habit)
 
 ;;; Tags
+;; タグのリスト
+(setq org-tag-alist '(("@Home" . ?h) ("@Mac" . ?m)))
+
 ;; タグ列
 (setq org-tags-column -90)
 
