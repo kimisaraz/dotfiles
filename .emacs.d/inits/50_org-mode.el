@@ -71,7 +71,7 @@
 
 ;;; Tags
 ;; タグのリスト
-(setq org-tag-alist '(("@Home" . ?h) ("@Mac" . ?m)))
+(setq org-tag-alist '(("@Home" . ?h) ("@Mac" . ?m) ("@Reading" . ?r)))
 
 ;; タグ列
 (setq org-tags-column -90)
