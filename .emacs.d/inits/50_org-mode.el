@@ -71,8 +71,8 @@
 
 ;;; Tags
 ;; タグのリスト
-(setq org-tag-alist '(("@Home" . ?h) ("@Mac" . ?m) ("@iPhone" . ?i)
-                      ("@Reading" . ?r) ("@Video" . ?v) ("@Audio" . ?a)))
+;; (setq org-tag-alist '(("@Home" . ?h) ("@Mac" . ?m) ("@iPhone" . ?i)
+;;                       ("@Reading" . ?r) ("@Video" . ?v) ("@Audio" . ?a)))
 
 ;; タグ列
 (setq org-tags-column -90)
