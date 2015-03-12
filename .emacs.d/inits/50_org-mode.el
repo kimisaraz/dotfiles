@@ -4,6 +4,42 @@
 
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
 
+;;; Tasks
+;; 完了状態になった時、CLOSEDタイムスタンプを付与する
+(setq org-log-done 'time)
+
+;; 状態の変化をLOGBOOK drawerに保存する
+(setq org-log-into-drawer t)
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "|" "DONE(d)")
+        (type "INBOX(i)" "MAYBE(m)" "WAIT(w)" "|")
+        (type "|" "CANCELED(C)" "DELEGATED(D)")))
+
+;; 依存タスクが完了していない場合、DONE状態への変更をブロックする
+(setq org-enforce-todo-dependencies t)
+
+;; 未完了のチェックボックスを持つエントリーがDONE状態になるのをブロックする
+(setq org-enforce-todo-checkbox-dependencies t)
+
+;; Enable org-habit
+;; http://orgmode.org/manual/Tracking-your-habits.html
+(add-to-list 'org-modules 'org-habit)
+
+;;; Tags
+;; タグのリスト
+;; (setq org-tag-alist '(("@Home" . ?h) ("@Mac" . ?m) ("@iPhone" . ?i)
+;;                       ("@Reading" . ?r) ("@Video" . ?v) ("@Audio" . ?a)))
+
+;; タグ列
+(setq org-tags-column -90)
+
+;;; Properties
+;; グローバルプロパティの定義
+(setq org-global-properties
+      '(("rating_ALL". "1 2 3 4 5")
+        ("STYLE_ALL". "habit")))
+
 ;;; Capture
 ;; Default target for storing notes
 (setq org-default-notes-file (concat org-directory "agenda/tasks.org"))
@@ -46,42 +82,6 @@
 
 ;; 日記ファイル
 (setq org-agenda-diary-file (concat org-directory "diary.org"))
-
-;;; Tasks
-;; 完了状態になった時、CLOSEDタイムスタンプを付与する
-(setq org-log-done 'time)
-
-;; 状態の変化をLOGBOOK drawerに保存する
-(setq org-log-into-drawer t)
-
-(setq org-todo-keywords
-      '((sequence "TODO(t)" "|" "DONE(d)")
-        (type "INBOX(i)" "MAYBE(m)" "WAIT(w)" "|")
-        (type "|" "CANCELED(C)" "DELEGATED(D)")))
-
-;; 依存タスクが完了していない場合、DONE状態への変更をブロックする
-(setq org-enforce-todo-dependencies t)
-
-;; 未完了のチェックボックスを持つエントリーがDONE状態になるのをブロックする
-(setq org-enforce-todo-checkbox-dependencies t)
-
-;; Enable org-habit
-;; http://orgmode.org/manual/Tracking-your-habits.html
-(add-to-list 'org-modules 'org-habit)
-
-;;; Tags
-;; タグのリスト
-;; (setq org-tag-alist '(("@Home" . ?h) ("@Mac" . ?m) ("@iPhone" . ?i)
-;;                       ("@Reading" . ?r) ("@Video" . ?v) ("@Audio" . ?a)))
-
-;; タグ列
-(setq org-tags-column -90)
-
-;;; Properties
-;; グローバルプロパティの定義
-(setq org-global-properties
-      '(("rating_ALL". "1 2 3 4 5")
-        ("STYLE_ALL". "habit")))
 
 ;;; Babel
 ;; http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-dot.html
