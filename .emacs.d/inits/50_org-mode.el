@@ -11,10 +11,11 @@
 ;; 状態の変化をLOGBOOK drawerに保存する
 (setq org-log-into-drawer t)
 
+;; TODOキーワード
 (setq org-todo-keywords
       '((sequence "TODO(t)" "|" "DONE(d)")
-        (type "INBOX(i)" "MAYBE(m)" "WAIT(w)" "|")
-        (type "|" "CANCELED(C)" "DELEGATED(D)")))
+        (type     "INBOX(i)" "MAYBE(m)" "WAIT(w)" "|")
+        (type     "|" "CANCELED(C)" "DELEGATED(D)")))
 
 ;; 依存タスクが完了していない場合、DONE状態への変更をブロックする
 (setq org-enforce-todo-dependencies t)
@@ -27,7 +28,7 @@
 (add-to-list 'org-modules 'org-habit)
 
 ;;; Tags
-;; タグのリスト
+;; タグリスト
 ;; (setq org-tag-alist '(("@Home" . ?h) ("@Mac" . ?m) ("@iPhone" . ?i)
 ;;                       ("@Reading" . ?r) ("@Video" . ?v) ("@Audio" . ?a)))
 
