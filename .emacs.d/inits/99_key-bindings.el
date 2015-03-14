@@ -69,6 +69,14 @@
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c C-l") 'org-insert-link-global)
 (global-set-key (kbd "C-c C-o") 'org-open-at-point-global)
+(define-key org-mode-map (kbd "C-S-f") 'org-shiftright)
+(define-key org-mode-map (kbd "C-S-b") 'org-shiftleft)
+(define-key org-mode-map (kbd "C-S-p") 'org-shiftup)
+(define-key org-mode-map (kbd "C-S-n") 'org-shiftdown)
+(define-key org-mode-map (kbd "M-F")   'org-metaright)
+(define-key org-mode-map (kbd "M-B")   'org-metaleft)
+(define-key org-mode-map (kbd "M-P")   'org-metaup)
+(define-key org-mode-map (kbd "M-N")   'org-metadown)
 
 ;; point-undo
 (global-set-key (kbd "M-[") 'point-undo)
