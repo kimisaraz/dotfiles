@@ -39,6 +39,7 @@
 ;; グローバルプロパティの定義
 (setq org-global-properties
       '(("rating_ALL" . "1 2 3 4 5")
+        ("concluded_ALL" . "true false")
         ("STYLE_ALL" . "habit")))
 
 ;;; Capture
