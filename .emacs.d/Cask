@@ -18,6 +18,7 @@
 (depends-on "haml-mode")
 (depends-on "helm")
 (depends-on "helm-ls-git")
+(depends-on "helm-swoop")
 (depends-on "htmlize")
 (depends-on "init-loader")
 (depends-on "japanese-holidays")
