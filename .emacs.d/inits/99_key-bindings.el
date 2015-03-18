@@ -56,6 +56,12 @@
 ;; helm-ls-git
 (global-set-key (kbd "C-x C-l")   'helm-ls-git-ls) ; was downcase-region
 
+;; helm-swoop
+(define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
+(define-key helm-swoop-map (kbd "C-s") 'helm-next-line)
+(define-key helm-multi-swoop-map (kbd "C-r") 'helm-previous-line)
+(define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
+
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
