@@ -17,6 +17,7 @@
 (depends-on "graphviz-dot-mode")
 (depends-on "haml-mode")
 (depends-on "helm")
+(depends-on "helm-ag")
 (depends-on "helm-ls-git")
 (depends-on "helm-swoop")
 (depends-on "htmlize")
