@@ -53,6 +53,10 @@
 (define-key helm-map (kbd "C-w")   'backward-kill-word) ; was helm-yank-text-at-point
 (define-key helm-map (kbd "C-S-w") 'helm-yank-text-at-point)
 
+;; helm-ag
+(global-set-key (kbd "M-s a") 'helm-ag)
+(global-set-key (kbd "M-s p") 'helm-ag-project-root)
+
 ;; helm-ls-git
 (global-set-key (kbd "C-x C-l")   'helm-ls-git-ls) ; was downcase-region
 
