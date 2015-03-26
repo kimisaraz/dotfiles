@@ -105,3 +105,7 @@
 
 ;;; Export
 (setq org-export-with-sub-superscripts nil)
+
+;;; Misc
+;; Speed keys
+(setq org-use-speed-commands t)
