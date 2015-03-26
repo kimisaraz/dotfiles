@@ -9,6 +9,7 @@
 ;; (setq sp-highlight-wrap-tag-overlay nil)
 
 (sp-with-modes '(ruby-mode)
+  (sp-local-tag " " "{ " " }")
   (sp-local-tag "#" "#{" "}"))
 
 (sp-with-modes '(org-mode markdown-mode gfm-mode text-mode)
