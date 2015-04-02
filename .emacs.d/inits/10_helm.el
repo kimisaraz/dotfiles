@@ -9,6 +9,7 @@
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Help\\*")
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Messages\\*")
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Flycheck error messages\\*")
+(add-to-list 'helm-boring-buffer-regexp-list "\\*magit-process\\*")
 
 (set-face-attribute 'helm-source-header nil
                     :height 1.0 :weight 'semi-bold :family nil
