@@ -44,10 +44,9 @@
 (global-set-key (kbd "C-_")       'helm-resume)
 (global-set-key (kbd "M-x")       'helm-M-x) ; was execute-extended-command
 (global-set-key (kbd "M-y")       'helm-show-kill-ring) ; was yank-pop, cua-paste-pop
-(global-set-key (kbd "C-x b")     'helm-mini) ; was switch-to-buffer
-(global-set-key (kbd "C-x B")     'helm-buffers-list)
+(global-set-key (kbd "C-x b")     'helm-buffers-list) ; was switch-to-buffer
+(global-set-key (kbd "C-x B")     'helm-recentf)
 (global-set-key (kbd "C-x C-f")   'helm-find-files) ; was find-file, find-file-at-point
-(global-set-key (kbd "C-x C-S-f") 'helm-recentf)
 (global-set-key (kbd "M-s i")     'helm-imenu)
 (global-set-key (kbd "M-s o")     'helm-occur)
 (global-set-key (kbd "C-h a")     'helm-apropos) ; was apropos-command
