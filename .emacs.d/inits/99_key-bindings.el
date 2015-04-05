@@ -22,6 +22,9 @@
 ;; direx
 (global-set-key (kbd "C-x C-j") 'my:direx-jump-to-project-root-other-window) ; was dired-jump
 
+;; duplicate-thing
+(global-set-key (kbd "C-M-y") 'duplicate-thing)
+
 ;; expand-region
 (global-set-key (kbd "C-@")   'er/expand-region) ; was set-mark-command, cua-set-mark
 (global-set-key (kbd "C-M-@") 'er/contract-region) ; was mark-sexp
