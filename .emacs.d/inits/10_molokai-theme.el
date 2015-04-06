@@ -11,4 +11,4 @@
  '(isearch ((t (:foreground "Black" :background "Gray" :weight bold))))
  '(isearch-fail ((t (:foreground "Black" :background "OrangeRed"))))
  '(lazy-highlight ((t (:inherit isearch :weight normal))))
- '(trailing-whitespace ((t (:background "OrangeRed")))))
+ '(trailing-whitespace ((t (:background "gray50")))))
