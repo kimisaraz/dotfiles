@@ -40,16 +40,17 @@
 (define-key git-gutter+-mode-map (kbd "C-c g U") 'git-gutter+-unstage-whole-buffer)
 
 ;; helm
-(global-set-key (kbd "C-;")       'helm-mini)
-(global-set-key (kbd "C-_")       'helm-resume)
-(global-set-key (kbd "M-x")       'helm-M-x) ; was execute-extended-command
-(global-set-key (kbd "M-y")       'helm-show-kill-ring) ; was yank-pop, cua-paste-pop
-(global-set-key (kbd "C-x b")     'helm-buffers-list) ; was switch-to-buffer
-(global-set-key (kbd "C-x B")     'helm-recentf)
-(global-set-key (kbd "C-x C-f")   'helm-find-files) ; was find-file, find-file-at-point
-(global-set-key (kbd "M-s i")     'helm-imenu)
-(global-set-key (kbd "M-s o")     'helm-occur)
-(global-set-key (kbd "C-h a")     'helm-apropos) ; was apropos-command
+(global-set-key (kbd "C-;")     'helm-mini)
+(global-set-key (kbd "C-M-;")   'helm-find-files)
+(global-set-key (kbd "C-_")     'helm-resume)
+(global-set-key (kbd "M-x")     'helm-M-x) ; was execute-extended-command
+(global-set-key (kbd "M-y")     'helm-show-kill-ring) ; was yank-pop, cua-paste-pop
+(global-set-key (kbd "C-x b")   'helm-buffers-list) ; was switch-to-buffer
+(global-set-key (kbd "C-x B")   'helm-recentf)
+(global-set-key (kbd "C-x C-f") 'helm-find-files) ; was find-file, find-file-at-point
+(global-set-key (kbd "M-s i")   'helm-imenu)
+(global-set-key (kbd "M-s o")   'helm-occur)
+(global-set-key (kbd "C-h a")   'helm-apropos) ; was apropos-command
 (define-key helm-map (kbd "C-M-n") 'helm-next-source)
 (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
 (define-key helm-map (kbd "C-w")   'backward-kill-word) ; was helm-yank-text-at-point
@@ -60,7 +61,7 @@
 (global-set-key (kbd "M-s p") 'helm-ag-project-root)
 
 ;; helm-ls-git
-(global-set-key (kbd "C-x C-l")   'helm-ls-git-ls) ; was downcase-region
+(global-set-key (kbd "C-x C-l") 'helm-ls-git-ls) ; was downcase-region
 
 ;; helm-swoop
 (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
