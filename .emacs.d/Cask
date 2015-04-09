@@ -29,6 +29,7 @@
 (depends-on "popwin")
 (depends-on "magit")
 (depends-on "markdown-mode")
+(depends-on "migemo")
 (depends-on "molokai-theme")
 (depends-on "open-junk-file")
 (depends-on "recentf-ext")
