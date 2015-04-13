@@ -5,6 +5,8 @@
 (global-set-key (kbd "M-k")            'kill-this-buffer) ; was kill-sentence
 (global-set-key (kbd "M-,")            'bs-cycle-next)
 (global-set-key (kbd "M-.")            'bs-cycle-previous)
+(global-set-key (kbd "M-8")            'bs-cycle-next)
+(global-set-key (kbd "M-9")            'bs-cycle-previous)
 (global-set-key (kbd "M-Y")            'cua-paste-pop)
 (global-set-key (kbd "M-s I")          'imenu)
 (global-set-key (kbd "M-s O")          'occur)
