@@ -51,6 +51,8 @@
 (global-set-key (kbd "M-s i")   'helm-imenu)
 (global-set-key (kbd "M-s o")   'helm-occur)
 (global-set-key (kbd "C-h a")   'helm-apropos) ; was apropos-command
+(define-key helm-map (kbd "C-;")   'helm-keyboard-quit)
+(define-key helm-map (kbd "C-M-;") 'helm-quit-and-find-file)
 (define-key helm-map (kbd "C-M-n") 'helm-next-source)
 (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
 (define-key helm-map (kbd "C-w")   'backward-kill-word) ; was helm-yank-text-at-point
