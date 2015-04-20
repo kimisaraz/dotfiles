@@ -6,4 +6,5 @@
 
 (add-to-list 'ac-modes 'graphviz-dot-mode)
 (add-to-list 'ac-modes 'haml-mode)
+(add-to-list 'ac-modes 'scss-mode)
 (add-to-list 'ac-modes 'yaml-mode)
