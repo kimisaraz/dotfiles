@@ -8,7 +8,7 @@
 (global-set-key (kbd "M-8")            'bs-cycle-next)
 (global-set-key (kbd "M-9")            'bs-cycle-previous)
 (global-set-key (kbd "M-Y")            'cua-paste-pop)
-(global-set-key (kbd "M-s I")          'imenu)
+(global-set-key (kbd "M-s M")          'imenu)
 (global-set-key (kbd "M-s O")          'occur)
 
 ;; anzu
@@ -50,7 +50,7 @@
 (global-set-key (kbd "C-x b")   'helm-buffers-list) ; was switch-to-buffer
 (global-set-key (kbd "C-x B")   'helm-recentf)
 (global-set-key (kbd "C-x C-f") 'helm-find-files) ; was find-file, find-file-at-point
-(global-set-key (kbd "M-s i")   'helm-imenu)
+(global-set-key (kbd "M-s m")   'helm-imenu)
 (global-set-key (kbd "M-s o")   'helm-occur)
 (global-set-key (kbd "C-h a")   'helm-apropos) ; was apropos-command
 (define-key helm-map (kbd "C-;")   'helm-keyboard-quit)
