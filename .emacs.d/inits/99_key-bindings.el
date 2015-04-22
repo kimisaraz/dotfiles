@@ -8,6 +8,7 @@
 (global-set-key (kbd "M-8")            'bs-cycle-next)
 (global-set-key (kbd "M-9")            'bs-cycle-previous)
 (global-set-key (kbd "M-Y")            'cua-paste-pop)
+(global-set-key (kbd "M-I")            'tab-to-tab-stop)
 (global-set-key (kbd "M-s M")          'imenu)
 (global-set-key (kbd "M-s O")          'occur)
 
@@ -68,10 +69,15 @@
 (global-set-key (kbd "C-x C-l") 'helm-ls-git-ls) ; was downcase-region
 
 ;; helm-swoop
+(global-set-key (kbd "M-i")     'helm-swoop) ; was tab-to-tab-stop
+(global-set-key (kbd "M-s i")   'helm-multi-swoop)
+(global-set-key (kbd "M-s M-i") 'helm-multi-swoop-all)
+(define-key helm-swoop-map (kbd "M-i") 'helm-multi-swoop-all-from-helm-swoop)
 (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
 (define-key helm-swoop-map (kbd "C-s") 'helm-next-line)
 (define-key helm-multi-swoop-map (kbd "C-r") 'helm-previous-line)
 (define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
+(define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
