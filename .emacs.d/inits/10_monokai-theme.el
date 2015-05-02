@@ -18,4 +18,6 @@
  '(helm-ff-file ((t (:background nil))))
  '(helm-ff-directory ((t (:background nil :foreground "#66D9EF"))))
  '(helm-ff-dotted-directory ((t (:inherit helm-ff-directory :foreground "#21889B"))))
- '(helm-buffer-directory ((t (:inherit helm-ff-directory)))))
+ '(helm-buffer-directory ((t (:inherit helm-ff-directory))))
+ ;; magit
+ '(magit-item-highlight ((t (:inherit hl-line)))))
