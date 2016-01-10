@@ -3,6 +3,7 @@
 (source org)
 
 (depends-on "anzu")
+(depends-on "aurora-theme")
 (depends-on "auto-complete")
 (depends-on "calfw")
 (depends-on "coffee-mode")
