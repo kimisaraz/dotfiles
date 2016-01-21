@@ -108,6 +108,10 @@
 ;; popwin
 (global-set-key (kbd "C-^") popwin:keymap)
 
+;; search-web
+(global-set-key (kbd "M-s s")   'search-web-dwim)
+(global-set-key (kbd "M-s M-s") 'search-web-dwim)
+
 ;; smartparens
 (define-key sp-keymap (kbd "C-M-f") 'sp-forward-sexp) ; was forward-sexp
 (define-key sp-keymap (kbd "C-M-b") 'sp-backward-sexp) ; was backward-sexp
@@ -126,5 +130,3 @@
 (global-set-key (kbd "M-c")       'my:capitalize-region-or-word) ; was capitalize-word
 (global-set-key (kbd "C-x TAB")   'my:format-whole-buffer) ; was indent-rigidly
 (global-set-key (kbd "C-x S-TAB") 'my:indent-whole-buffer)
-(global-set-key (kbd "M-s s")     'my:search-web-at-point-or-region)
-(global-set-key (kbd "M-s M-s")   'my:search-web-at-point-or-region)

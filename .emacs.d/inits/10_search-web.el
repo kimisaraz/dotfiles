@@ -1,11 +1,5 @@
 (require 'search-web)
 
-(add-to-list 'search-engines '("rurema" . "http://rurema.clear-code.com/query:%s/"))
-(add-to-list 'search-engines '("rails" . "http://api.rubyonrails.org/?q=%s"))
-(add-to-list 'search-engines '("dict" . "dict:///%s"))
-
-(defun my:search-web-at-point-or-region ()
-  (interactive)
-  (if (region-active-p)
-      (search-web-region)
-    (search-web-at-point)))
+(add-to-list 'search-web-engines '("rurema" "http://rurema.clear-code.com/query:%s/" nil))
+(add-to-list 'search-web-engines '("rails" "http://api.rubyonrails.org/?q=%s" nil))
+(add-to-list 'search-web-engines '("dict" "dict:///%s" nil))
