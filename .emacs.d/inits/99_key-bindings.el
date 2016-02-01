@@ -121,6 +121,8 @@
 (global-set-key (kbd "M-L") 'string-inflection-underscore)
 (global-set-key (kbd "M-C") 'string-inflection-camelcase)
 
+(global-set-key (kbd "M-O") 'swap-buffers)
+
 ;; Mine
 (global-set-key (kbd "M-K")       'my:pop-killed-file-name-list)
 (global-set-key (kbd "M-o")       'my:other-window-or-split) ; was prefix for facemenu-set-*

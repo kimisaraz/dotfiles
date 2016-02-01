@@ -41,6 +41,7 @@
 (depends-on "search-web")
 (depends-on "smartparens")
 (depends-on "string-inflection")
+(depends-on "swap-buffers")
 (depends-on "undo-tree")
 (depends-on "yaml-mode")
 (depends-on "yascroll")
