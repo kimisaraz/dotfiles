@@ -2,6 +2,7 @@
 (keyboard-translate ?\C-h ?\C-?) ; C-hをバックスペースにする
 (global-set-key (kbd "C-x C-S-j")      'dired-jump)
 (global-set-key (kbd "C-x <C-return>") 'cua-set-rectangle-mark)
+(global-set-key (kbd "M-SPC")          'cycle-spacing) ; was just-one-space
 (global-set-key (kbd "M-k")            'kill-this-buffer) ; was kill-sentence
 (global-set-key (kbd "M-,")            'bs-cycle-next)
 (global-set-key (kbd "M-.")            'bs-cycle-previous)
@@ -121,6 +122,7 @@
 (global-set-key (kbd "M-L") 'string-inflection-underscore)
 (global-set-key (kbd "M-C") 'string-inflection-camelcase)
 
+;; swap-buffers
 (global-set-key (kbd "M-O") 'swap-buffers)
 
 ;; Mine
