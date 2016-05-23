@@ -23,11 +23,11 @@
 ;; リージョンが活性化していればリージョンを削除
 ;; 非活性であれば直前の単語を削除
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
-(defun my:kill-region-or-backward-kill-word ()
+(defun my:kill-region-or-subword-backward-kill ()
   (interactive)
   (if (region-active-p)
       (kill-region (point) (mark))
-    (backward-kill-word 1)))
+    (subword-backward-kill 1)))
 
 ;; リージョンが活性化していればリージョンを、非活性であれば単語を大文字化
 (defun my:upcase-region-or-word ()

@@ -128,7 +128,7 @@
 ;; Mine
 (global-set-key (kbd "M-K")       'my:pop-killed-file-name-list)
 (global-set-key (kbd "M-o")       'my:other-window-or-split) ; was prefix for facemenu-set-*
-(global-set-key (kbd "C-w")       'my:kill-region-or-backward-kill-word) ; was kill-region
+(global-set-key (kbd "C-w")       'my:kill-region-or-subword-backward-kill) ; was kill-region
 (global-set-key (kbd "M-u")       'my:upcase-region-or-word) ; was upcase-word
 (global-set-key (kbd "M-l")       'my:downcase-region-or-word) ; was downcase-word
 (global-set-key (kbd "M-c")       'my:capitalize-region-or-word) ; was capitalize-word
