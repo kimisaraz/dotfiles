@@ -46,6 +46,7 @@
 ;; helm
 (global-set-key (kbd "C-;")     'helm-mini)
 (global-set-key (kbd "C-M-;")   'helm-find-files)
+(global-set-key (kbd "C-+")     'helm-resume)
 (global-set-key (kbd "C-_")     'helm-resume)
 (global-set-key (kbd "M-x")     'helm-M-x) ; was execute-extended-command
 (global-set-key (kbd "M-y")     'helm-show-kill-ring) ; was yank-pop, cua-paste-pop
