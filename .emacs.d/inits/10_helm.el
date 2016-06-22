@@ -2,6 +2,7 @@
 
 (setq helm-candidate-number-limit 600)
 (setq helm-quick-update t)
+(setq helm-split-window-in-side-p t)
 
 (add-to-list 'helm-boring-buffer-regexp-list "\\*scratch\\*")
 (add-to-list 'helm-boring-buffer-regexp-list "\\*Calendar\\*")
