@@ -23,6 +23,9 @@
 (define-key ac-menu-map (kbd "C-n") 'next-line) ; was ac-next
 (define-key ac-menu-map (kbd "C-p") 'previous-line) ; was ac-previous
 
+;; calfw
+(define-key ac-mode-map (kbd "C-c m") 'cfw:open-org-calendar)
+
 ;; direx
 (global-set-key (kbd "C-x C-j") 'my:direx-jump-to-project-root-other-window) ; was dired-jump
 
