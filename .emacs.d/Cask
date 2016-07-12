@@ -37,6 +37,7 @@
 (depends-on "monokai-theme")
 (depends-on "open-junk-file")
 (depends-on "recentf-ext")
+(depends-on "ruby-hash-syntax")
 (depends-on "sass-mode")
 (depends-on "scss-mode")
 (depends-on "search-web")
