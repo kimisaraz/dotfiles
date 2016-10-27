@@ -110,3 +110,5 @@
 ;;; Misc
 ;; Speed keys
 (setq org-use-speed-commands t)
+
+(require 'org-drill)
