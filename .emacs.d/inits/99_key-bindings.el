@@ -70,6 +70,8 @@
 ;; helm-ag
 (global-set-key (kbd "M-s a") 'helm-ag)
 (global-set-key (kbd "M-s p") 'helm-ag-project-root)
+(global-set-key (kbd "M-+") 'helm-ag-project-root) ; For JIS keyboard
+(global-set-key (kbd "M-:") 'helm-ag-project-root)
 
 ;; helm-ghq
 (global-set-key (kbd "M-s g") 'helm-ghq)
