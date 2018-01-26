@@ -72,7 +72,7 @@
 (global-set-key (kbd "M-s p") 'helm-ag-project-root)
 
 ;; helm-ghq
-(global-set-key (kbd "M-+") 'helm-ghq)
+(global-set-key (kbd "M-s g") 'helm-ghq)
 
 ;; helm-ls-git
 (global-set-key (kbd "C-x C-l") 'helm-ls-git-ls) ; was downcase-region
