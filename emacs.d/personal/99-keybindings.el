@@ -7,16 +7,21 @@
 ;;; Code:
 
 ;;; キーの解放
+;; flyspell
+(with-eval-after-load 'flyspell
+  ;; C-;を解放(consult-bufferで使用するため)
+  (define-key flyspell-mode-map (kbd "C-;") nil)) ; was flyspell-auto-correct-previous-word
+
 ;; prelude-mode
 (with-eval-after-load 'prelude-mode
-  ;; M-o を解放（my:other-window-or-splitで使用するため）
+  ;; M-oを解放(my:other-window-or-splitで使用するため)
   (define-key prelude-mode-map (kbd "M-o") nil)
-  ;; C-S-<return>を解放（org-insert-todo-headingで使用するため）
+  ;; C-S-<return>を解放(org-insert-todo-headingで使用するため)
   (define-key prelude-mode-map [(control shift return)] nil)) ; was crux-smart-open-line-above
 
 ;; undo-tree
 (with-eval-after-load 'undo-tree
-  ;; C-_とM-_を解放(C-/とC-?を使用するため)
+  ;; C-_とM-_を解放(C-/とC-?にも割り当てられているのでそちらを使う)
   (define-key undo-tree-map (kbd "C-_") nil) ; was undo-tree-undo
   (define-key undo-tree-map (kbd "M-_") nil)) ; was undo-tree-redo
 
@@ -43,9 +48,12 @@
 (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp) ; was query-replace-regexp
 (global-set-key (kbd "C-%")   'anzu-replace-at-cursor-thing)
 
+;; consult
+(global-set-key (kbd "C-;") 'consult-buffer) ; was flyspell-auto-correct-previous-word
+
 ;; crux
-(global-set-key (kbd "M-O")       'crux-swap-windows)
-(global-set-key (kbd "C-x TAB")   'crux-cleanup-buffer-or-region) ; was indent-rigidly
+(global-set-key (kbd "M-O")     'crux-swap-windows)
+(global-set-key (kbd "C-x TAB") 'crux-cleanup-buffer-or-region) ; was indent-rigidly
 
 ;; expand-region
 (global-set-key (kbd "C-@")   'er/expand-region) ; was set-mark-command, cua-set-mark
@@ -74,6 +82,11 @@
 ;; smartparens
 (define-key sp-keymap (kbd "C-M-f") 'sp-forward-sexp) ; was forward-sexp
 (define-key sp-keymap (kbd "C-M-b") 'sp-backward-sexp) ; was backward-sexp
+
+;; vertico
+(with-eval-after-load 'vertico
+  ;; C-;でミニバッファを閉じる（consult-buffer のトグル動作）
+  (define-key vertico-map (kbd "C-;") 'abort-recursive-edit))
 
 ;; TODO install
 ;; string-inflection
