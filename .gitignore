@@ -11,3 +11,7 @@
 /.emacs.d/eww-bookmarks
 /.emacs.d/url/
 /.emacs.d/eshell/
+
+# Karabiner-Elements
+/config/karabiner/*
+!/config/karabiner/karabiner.json
