@@ -15,3 +15,4 @@
 # Karabiner-Elements
 /config/karabiner/*
 !/config/karabiner/karabiner.json
+!/config/karabiner/README.md
