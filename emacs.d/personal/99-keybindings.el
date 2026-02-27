@@ -52,7 +52,6 @@
 (global-set-key (kbd "C-;") 'consult-buffer) ; was flyspell-auto-correct-previous-word
 
 ;; crux
-(global-set-key (kbd "M-O")     'crux-swap-windows)
 (global-set-key (kbd "C-x TAB") 'crux-cleanup-buffer-or-region) ; was indent-rigidly
 
 ;; expand-region
@@ -97,6 +96,7 @@
 ;; Mine
 (global-set-key (kbd "M-K")       'my:pop-killed-file-name-list)
 (global-set-key (kbd "M-o")       'my:other-window-or-split) ; was prefix for facemenu-set-*
+(global-set-key (kbd "M-O")       'my:other-window-or-split-reverse)
 (global-set-key (kbd "C-w")       'my:kill-region-or-subword-backward-kill) ; was kill-region
 (global-set-key (kbd "M-u")       'my:upcase-region-or-word) ; was upcase-word
 (global-set-key (kbd "M-l")       'my:downcase-region-or-word) ; was downcase-word
