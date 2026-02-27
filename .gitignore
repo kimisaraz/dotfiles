@@ -11,6 +11,7 @@
 /.emacs.d/eww-bookmarks
 /.emacs.d/url/
 /.emacs.d/eshell/
+/.emacs.d/multisession/
 
 # Karabiner-Elements
 /config/karabiner/*
