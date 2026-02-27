@@ -9,8 +9,8 @@
 (with-eval-after-load 'org
   ;;; Agenda設定
   ;; アジェンダファイルの場所
-  (setq org-agenda-files '("~/works/github.com/kimisaraz/notes/"
-                           "~/works/github.com/kimisaraz/stpl_notes/"))
+  (setq org-agenda-files (append (file-expand-wildcards "~/works/github.com/kimisaraz/notes/*_agenda*.org")
+                                  (file-expand-wildcards "~/works/github.com/kimisaraz/stpl_notes/*_agenda*.org")))
 
   ;; 時間表示が1桁のとき、0埋めで表示する
   (setq org-agenda-time-leading-zero t)
@@ -60,6 +60,10 @@
   ;;; 時間表示設定
   ;; 時間を日数ではなく時間形式で表示する（clocktable用）
   (setq org-duration-format '(("h" . t) (special . h:mm)))
+
+  ;;; インデント設定
+  ;; org-indent-mode を有効にして見出しレベルに応じた仮想インデントを表示する
+  (setq org-startup-indented t)
 
   ;;; テンプレート設定
   ;; org-tempo を有効にして <s TAB などのテンプレート展開を使えるようにする(非推奨)
