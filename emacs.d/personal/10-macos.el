@@ -19,9 +19,16 @@
   (when (fboundp 'mac-auto-ascii-mode)
     (mac-auto-ascii-mode 1))
 
-  ;; Homebrew のパスを明示的に追加（exec-path-from-shell で拾えない場合の保険）
-  (add-to-list 'exec-path "/opt/homebrew/bin")
-  (setenv "PATH" (concat "/opt/homebrew/bin:" (getenv "PATH")))
+  ;; Prelude の exec-path-from-shell はデフォルトシェル (zsh) で PATH を取得するが、
+  ;; fish の PATH 設定が反映されない。fish から直接 PATH を取得して上書きする。
+  (let ((fish-path (string-trim
+                    (shell-command-to-string
+                     "/opt/homebrew/bin/fish -i -c 'printenv PATH' 2>/dev/null"))))
+    (when (> (length fish-path) 0)
+      (setenv "PATH" fish-path)
+      (setq exec-path (append (parse-colon-path fish-path)
+                              (list exec-directory)))))
+
   )
 
 (provide '10-macos)
