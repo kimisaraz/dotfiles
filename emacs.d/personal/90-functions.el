@@ -33,6 +33,15 @@
     (split-window-horizontally))
   (other-window 1))
 
+;; ウィンドウが分割していれば逆順にウィンドウを切り替える
+;; 分割していなければ分割する
+(defun my:other-window-or-split-reverse ()
+  "Switch to previous window, or split horizontally if only one window."
+  (interactive)
+  (when (one-window-p)
+    (split-window-horizontally))
+  (other-window -1))
+
 ;; リージョンが活性化していればリージョンを削除
 ;; 非活性であれば直前の単語を削除
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
