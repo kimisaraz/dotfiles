@@ -8,21 +8,16 @@
 
 ;;; フォント設定
 (when (and (eq system-type 'darwin)
-           (x-list-fonts "HackGen Console NF"))
+           (x-list-fonts "HackGen Console"))
   ;; ASCII フォントを白源に
   (set-face-attribute 'default nil
-                      :family "HackGen Console NF"
+                      :family "HackGen Console"
                       :height 140) ; 14pt (height は10倍の値)
 
   ;; 日本語フォントを白源に
   (set-fontset-font nil 'japanese-jisx0208
-                    (font-spec :family "HackGen Console NF"))
-
-  ;; 絵文字フォント（オプション）
-  (when (x-list-fonts "Apple Color Emoji")
-    (set-fontset-font nil 'unicode
-                      (font-spec :family "Apple Color Emoji")
-                      nil 'append)))
+                    (font-spec :family "HackGen Console"))
+  )
 
 ;;; カーソルの点滅設定
 ;; カーソルの点滅を有効にする
