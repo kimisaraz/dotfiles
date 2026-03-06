@@ -18,7 +18,6 @@
   :bind*
   (("C-c n n" . denote-create-note)
    ("C-c n o" . denote-open-or-create)
-   ("C-c n s" . denote-create-note-in-subdirectory)
    ("C-c n d" . denote-dired)
    ("C-c n g" . denote-grep)
    ("C-c n l" . denote-link-or-create)
@@ -37,11 +36,8 @@
    ("C-c C-d C-k" . denote-dired-rename-marked-files-with-keywords)
    ("C-c C-d C-R" . denote-dired-rename-marked-files-using-front-matter))
   :config
-  ;; ノート保存ディレクトリの設定（複数ディレクトリをリストで指定）
-  ;; 末尾のスラッシュは denote が自動的に追加するため不要
-  (setq denote-directory
-        (list (expand-file-name "~/works/github.com/kimisaraz/notes/")
-              (expand-file-name "~/works/github.com/kimisaraz/stpl_notes/")))
+  ;; ノート保存ディレクトリの設定
+  (setq denote-directory (expand-file-name "~/works/github.com/kimisaraz/notes/"))
 
   ;; ファイル保存時の自動バッファ保存を無効化（手動保存が好ましい場合）
   (setq denote-save-buffers nil)
@@ -56,10 +52,9 @@
   (setq denote-sort-keywords t)
 
   ;; ノート作成時のプロンプト設定
-  ;; subdirectory
   ;; title: ノートのタイトル
   ;; keywords: キーワード(タグ)
-  (setq denote-prompts '(subdirectory title keywords))
+  (setq denote-prompts '(title keywords))
 
   ;; 除外するディレクトリの正規表現（nil = すべて含める）
   ;; assets と restricted を含めてすべてのサブディレクトリを管理対象にする
@@ -78,21 +73,16 @@
 
   ;; バッファ名にノートのタイトルをタイトルを表示
   (denote-rename-buffer-mode 1)
+  )
 
-  ;; denote 4.1.3 のバグ回避: 複数ディレクトリ使用時のパス検証を修正
-  ;; denote-subdirectory-prompt が返す末尾スラッシュなしのパスと
-  ;; denote-directories の末尾スラッシュありのパスを正しく比較する
-  (defun denote--dir-in-denote-directory-p-fixed (directory)
-    "Return non-nil if DIRECTORY is in variable `denote-directory'.
-This is a fixed version that handles trailing slashes correctly."
-    (let ((dir-normalized (file-name-as-directory (expand-file-name directory))))
-      (seq-some
-       (lambda (d)
-         (string-prefix-p d dir-normalized))
-       (denote-directories))))
-
-  (advice-add 'denote--dir-in-denote-directory-p :override
-              #'denote--dir-in-denote-directory-p-fixed))
+(use-package denote-silo
+  :ensure t
+  :after denote
+  :bind* (("C-c n s" . denote-silo-open-or-create))
+  :config
+  (setq denote-silo-directories
+        (list (expand-file-name "~/works/github.com/kimisaraz/notes/")
+              (expand-file-name "~/works/github.com/kimisaraz/stpl_notes/"))))
 
 (provide '45-denote)
 ;;; 45-denote.el ends here
