@@ -72,8 +72,17 @@
   (setq denote-date-prompt-use-org-read-date t)
 
   ;; バッファ名にノートのタイトルをタイトルを表示
-  (denote-rename-buffer-mode 1)
-  )
+  (denote-rename-buffer-mode 1))
+
+(use-package denote-journal
+  :ensure t
+  :after denote
+  :bind* (("C-c n j" . denote-journal-new-or-existing-entry))
+  :hook (calendar-mode . denote-journal-calendar-mode)
+  :init
+  (put 'denote-journal-directory 'safe-local-variable #'stringp)
+  :config
+  (setq denote-journal-title-format "%Y-%m-%d"))
 
 (use-package denote-silo
   :ensure t
