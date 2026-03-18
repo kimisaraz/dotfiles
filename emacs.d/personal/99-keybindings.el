@@ -78,6 +78,9 @@
 (global-set-key (kbd "C-<") 'point-undo)
 (global-set-key (kbd "C->") 'point-redo)
 
+;; projectile
+(define-key projectile-command-map (kbd "G") 'my:projectile-switch-project-magit)
+
 ;; smartparens
 (define-key sp-keymap (kbd "C-M-f") 'sp-forward-sexp) ; was forward-sexp
 (define-key sp-keymap (kbd "C-M-b") 'sp-backward-sexp) ; was backward-sexp

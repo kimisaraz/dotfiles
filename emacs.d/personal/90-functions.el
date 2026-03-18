@@ -201,5 +201,13 @@
    ;; Invalid URL
    (t (message "Error: Invalid GitHub PR/Issue URL format"))))
 
+;; projectile のプロジェクト一覧から選んで magit-status を開く
+(defun my:projectile-switch-project-magit ()
+  "Switch to a project and open magit-status."
+
+  (interactive)
+  (let ((projectile-switch-project-action #'magit-status))
+    (projectile-switch-project)))
+
 (provide '90-functions)
 ;;; 90-functions.el ends here
