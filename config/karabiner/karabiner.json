@@ -211,6 +211,19 @@
                         ]
                     },
                     {
+                        "description": "Left ControlをCaps Lockとして動作させる",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Caps Lockを単体で押したときにReturnを送信し、他のキーと組み合わせたときにLeft Controlとして動作する",
                         "manipulators": [
                             {
@@ -1852,12 +1865,7 @@
                         "product_id": 834,
                         "vendor_id": 1452
                     },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "caps_lock" }]
-                        }
-                    ]
+                    "simple_modifications": []
                 }
             ],
             "name": "Mine",
