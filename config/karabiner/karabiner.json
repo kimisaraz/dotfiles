@@ -211,6 +211,25 @@
                         ]
                     },
                     {
+                        "description": "Caps Lockを単体で押したときにReturnを送信し、他のキーと組み合わせたときにLeft Controlとして動作する",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_held_down_threshold_milliseconds": 100,
+                                    "basic.to_if_alone_timeout_milliseconds": 250
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "to_if_alone": [{ "key_code": "return_or_enter" }],
+                                "to_if_held_down": [{ "key_code": "left_control" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "シフトキーを単体で押したときに、英数・かなキーを送信する。（左シフトキーは英数、右シフトキーはかな)",
                         "manipulators": [
                             {
@@ -1834,10 +1853,6 @@
                         "vendor_id": 1452
                     },
                     "simple_modifications": [
-                        {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
                         {
                             "from": { "key_code": "left_control" },
                             "to": [{ "key_code": "caps_lock" }]

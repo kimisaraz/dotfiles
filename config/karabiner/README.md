@@ -16,18 +16,17 @@ MacBook USキーボード
   - 長年の癖が抜けないので仕方なくCommandキー単体で英数/かなを送信する機能も残している
 - 小指:
   - Emacsで左手小指を酷使するのを避けるため、ReturnにもControl機能を追加
+  - Caps Lock(Left Control位置)にもReturn機能を追加し、左右どちらの小指でもControlとReturnを使い分けられるようにする
 
 ### Emacs
 - Emacs的キーバインディングをできるだけ利用できるようにする
 
 
-## デバイス設定
-
-- **Caps Lock** ⇄ **Left Control** 入れ替え
-
-
 ## キーの二重機能 (Dual Function Keys)
 
+- Caps Lock:
+  - 単体押し → Return
+  - 長押し → Left Control
 - スペース:
   - 単体押し → スペース
   - 長押し → Command
