@@ -27,6 +27,8 @@ MacBook USキーボード
 - Caps Lock:
   - 単体押し → Return
   - 長押し → Left Control
+- Left Control:
+  - Caps Lockとして動作(Caps Lockの本来の機能を補完)
 - スペース:
   - 単体押し → スペース
   - 長押し → Command
@@ -46,7 +48,7 @@ MacBook USキーボード
   - 単体押し → かな
   - 長押し → Command
 
-単体押し判定タイムアウトは250ms
+単体押し判定タイムアウトはkarabiner.jsonの `basic.to_if_alone_timeout_milliseconds` で設定
 - この時間以内にキーを離すと単体押しと判定、それ以上で長押しとして動作する
 - タイムアウト後は単体押しのキーが送信されないことが重要
 
@@ -101,10 +103,6 @@ MacBook USキーボード
 VSCodeではEmacsキーバインドが有効(Control+keys, Option+keys)
 
 ## 検討中の項目
-
-### タイムアウト時間の調整
-- 現在: 250ms
-- 検討: 最大350ms程度まで上げる余地あり(使用感を試している段階)
 
 ### Control + g → Escape
 - 現在: 有効
