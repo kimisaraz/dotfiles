@@ -2,6 +2,15 @@
 
 # Change log
 
+## Unreleased
+
+### Bugs fixed
+
+- [#1450](https://github.com/bbatsov/prelude/issues/1450): Remove broken `slime-complete-symbol-function` setting in `prelude-common-lisp` (referenced an undefined `slime-flex-completions` symbol; the variable itself has been obsolete since 2015).
+- Fix `prelude-ocaml` integration with `neocaml`: hook into `neocaml-base-mode` (so `.mli` files are covered), enable `ocaml-eglot-mode` properly, and call `prelude-lsp-enable` so the LSP server actually starts.
+- Use `ocaml-eglot-mode` instead of the obsolete `ocaml-eglot` alias (renamed in `ocaml-eglot` 1.4.0).
+- Add a temporary `eglot-server-programs` entry for `neocaml` so older `neocaml` versions still get `ocamllsp` started. Can be removed once `neocaml >= 20260331` is widely available on MELPA.
+
 ## 2.1.0 (2026-03-29)
 
 ### New features

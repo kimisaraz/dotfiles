@@ -60,8 +60,7 @@
   ;; slime-cl-indent provides better CL-aware indentation
   (setq slime-contribs '(slime-fancy slime-cl-indent))
 
-  (setq slime-complete-symbol-function 'slime-flex-completions
-        slime-autodoc-use-multiline-p t)
+  (setq slime-autodoc-use-multiline-p t)
 
   ;; Uncomment to let the Lisp process evaluate Emacs Lisp.
   ;; Useful for advanced setups but a potential security risk.
