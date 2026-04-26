@@ -40,12 +40,16 @@
 
 (add-hook 'lisp-mode-hook (lambda () (run-hooks 'prelude-lisp-coding-hook)))
 
+;; Default Lisp for `M-x run-lisp' (the built-in inferior Lisp mode).
+(setq inferior-lisp-program "sbcl")
+
 ;; SLIME: Superior Lisp Interaction Mode for Emacs.
 ;; If you prefer Sly (a modernized SLIME fork), install it in your
 ;; personal config instead.
 (use-package slime
   :ensure t
-  :defer t
+  :bind (:map slime-mode-map
+              ("C-c C-s" . slime-selector))
   :config
   ;; Known Common Lisp implementations.  Use M-- M-x slime to pick one.
   (setq slime-lisp-implementations
@@ -57,10 +61,9 @@
   (setq slime-default-lisp 'sbcl)
 
   ;; slime-fancy loads most popular contribs in one go;
-  ;; slime-cl-indent provides better CL-aware indentation
-  (setq slime-contribs '(slime-fancy slime-cl-indent))
-
-  (setq slime-autodoc-use-multiline-p t)
+  ;; slime-cl-indent provides better CL-aware indentation;
+  ;; slime-quicklisp adds Quicklisp integration.
+  (setq slime-contribs '(slime-fancy slime-cl-indent slime-quicklisp))
 
   ;; Uncomment to let the Lisp process evaluate Emacs Lisp.
   ;; Useful for advanced setups but a potential security risk.
@@ -71,9 +74,7 @@
   ;; prelude-lisp-coding-defaults.
   (add-hook 'slime-repl-mode-hook (lambda ()
                                     (smartparens-strict-mode +1)
-                                    (whitespace-mode -1)))
-
-  (define-key slime-mode-map (kbd "C-c C-s") 'slime-selector))
+                                    (whitespace-mode -1))))
 
 (provide 'prelude-common-lisp)
 

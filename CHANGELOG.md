@@ -4,6 +4,10 @@
 
 ## Unreleased
 
+### Changes
+
+- Tidy up `prelude-common-lisp`: drop stale `slime-autodoc-use-multiline-p` setting (the variable was removed from upstream SLIME; modern autodoc honors `eldoc-echo-area-use-multiline-p`), set `inferior-lisp-program` to `sbcl` so `M-x run-lisp` works without SLIME, and add `slime-quicklisp` to `slime-contribs` for Quicklisp integration.
+
 ### Bugs fixed
 
 - [#1450](https://github.com/bbatsov/prelude/issues/1450): Remove broken `slime-complete-symbol-function` setting in `prelude-common-lisp` (referenced an undefined `slime-flex-completions` symbol; the variable itself has been obsolete since 2015).
