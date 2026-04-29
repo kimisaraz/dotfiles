@@ -18,6 +18,7 @@
   '(prelude-vertico
     prelude-company
     prelude-ai
+    prelude-forge
     prelude-org
     prelude-programming
     prelude-c

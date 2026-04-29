@@ -169,6 +169,7 @@ only enable **one** of these:
 - [AI Assistant](ai.md) - LLM-backed chat via gptel
 - [ERC](erc.md) - IRC client configuration
 - [Evil](evil.md) - Vim emulation
+- [Forge](forge.md) - GitHub/GitLab/Gitea PRs and issues via Magit
 - [Key Chord](key_chord.md) - simultaneous key press bindings
 - [Literate Programming](literate-programming.md) - org-babel
   and Jupyter notebook support

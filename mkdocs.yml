@@ -52,6 +52,7 @@ nav:
         - AI Assistant: modules/ai.md
         - ERC (IRC): modules/erc.md
         - Evil (Vim): modules/evil.md
+        - Forge (PRs/Issues): modules/forge.md
         - Key Chord: modules/key_chord.md
         - Literate Programming: modules/literate-programming.md
         - Org Mode: modules/orgmode.md

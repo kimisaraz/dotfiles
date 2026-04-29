@@ -7,6 +7,7 @@
 ### New features
 
 - Add `prelude-ai` module: a thin wrapper around [gptel](https://github.com/karthink/gptel) for LLM-backed chat (Claude, GPT, Gemini, Ollama, etc.). Binds `gptel-menu` to `C-c q`. Backends and API keys are configured in personal config -- see the module documentation for examples.
+- Add `prelude-forge` module: enables [Forge](https://github.com/magit/forge) on top of Magit so you can read and reply to GitHub/GitLab/Gitea pull requests and issues without leaving Emacs.
 
 ### Changes
 
