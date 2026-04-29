@@ -17,6 +17,7 @@
 (defvar prelude-load-test-modules
   '(prelude-vertico
     prelude-company
+    prelude-ai
     prelude-org
     prelude-programming
     prelude-c

@@ -49,6 +49,7 @@ nav:
         - Ivy: modules/ivy.md
         - Vertico: modules/vertico.md
     - Other Modules:
+        - AI Assistant: modules/ai.md
         - ERC (IRC): modules/erc.md
         - Evil (Vim): modules/evil.md
         - Key Chord: modules/key_chord.md

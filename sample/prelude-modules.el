@@ -97,6 +97,7 @@
 (require 'prelude-yaml)
 
 ;;; Misc
+;; (require 'prelude-ai) ;; LLM-backed chat via gptel
 ;; (require 'prelude-erc) ;; A popular Emacs IRC client
 
 (provide 'prelude-modules)

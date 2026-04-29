@@ -166,6 +166,7 @@ only enable **one** of these:
 
 ## Other Modules
 
+- [AI Assistant](ai.md) - LLM-backed chat via gptel
 - [ERC](erc.md) - IRC client configuration
 - [Evil](evil.md) - Vim emulation
 - [Key Chord](key_chord.md) - simultaneous key press bindings
