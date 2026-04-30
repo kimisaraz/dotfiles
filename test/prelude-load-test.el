@@ -18,6 +18,7 @@
   '(prelude-vertico
     prelude-company
     prelude-ai
+    prelude-eglot-booster
     prelude-forge
     prelude-org
     prelude-programming

@@ -13,6 +13,7 @@ nav:
         - Programming: modules/programming.md
         - Lisp Base: modules/lisp.md
         - LSP: modules/lsp.md
+        - Eglot Booster: modules/eglot-booster.md
         - Company: modules/company.md
     - Programming Languages:
         - C/C++: modules/c.md

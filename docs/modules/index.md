@@ -119,6 +119,7 @@ These modules provide shared functionality used by other modules:
 - [Programming](programming.md) - common foundation for all programming modes
 - [Lisp Base](lisp.md) - common foundation for Lisp-family language modules
 - [LSP](lsp.md) - common foundation for modules using the Language Server Protocol
+- [Eglot Booster](eglot-booster.md) - speeds up Eglot via the `emacs-lsp-booster` wrapper
 - [Company](company.md) - completion framework used across many modes
 
 ## Programming Language Modules
