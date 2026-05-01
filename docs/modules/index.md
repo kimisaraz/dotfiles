@@ -122,6 +122,7 @@ These modules provide shared functionality used by other modules:
 - [Eglot Booster](eglot-booster.md) - speeds up Eglot via the `emacs-lsp-booster` wrapper
 - [Company](company.md) - completion framework (legacy)
 - [Corfu](corfu.md) - lightweight modern alternative to Company
+- [Apheleia](apheleia.md) - async, unified format-on-save
 
 ## Programming Language Modules
 

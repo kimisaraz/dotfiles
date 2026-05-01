@@ -19,6 +19,7 @@
     prelude-company
     prelude-corfu
     prelude-ai
+    prelude-apheleia
     prelude-eglot-booster
     prelude-forge
     prelude-org

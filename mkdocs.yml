@@ -16,6 +16,7 @@ nav:
         - Eglot Booster: modules/eglot-booster.md
         - Company: modules/company.md
         - Corfu: modules/corfu.md
+        - Apheleia (Format-on-save): modules/apheleia.md
     - Programming Languages:
         - C/C++: modules/c.md
         - Clojure: modules/clojure.md
