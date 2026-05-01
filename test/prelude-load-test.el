@@ -17,6 +17,7 @@
 (defvar prelude-load-test-modules
   '(prelude-vertico
     prelude-company
+    prelude-corfu
     prelude-ai
     prelude-eglot-booster
     prelude-forge

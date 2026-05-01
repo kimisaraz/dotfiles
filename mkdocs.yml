@@ -15,6 +15,7 @@ nav:
         - LSP: modules/lsp.md
         - Eglot Booster: modules/eglot-booster.md
         - Company: modules/company.md
+        - Corfu: modules/corfu.md
     - Programming Languages:
         - C/C++: modules/c.md
         - Clojure: modules/clojure.md
