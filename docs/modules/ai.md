@@ -18,7 +18,7 @@ gptel supports many providers, including:
 
 | Key | Command | Description |
 | --- | ------- | ----------- |
-| <kbd>C-c q</kbd> | `gptel-menu` | Transient menu — chat, send, rewrite, switch model, manage context |
+| <kbd>C-c q</kbd> | `gptel-menu` | Transient menu (entry to gptel) |
 
 Inside a gptel chat buffer, <kbd>C-c RET</kbd> sends the current
 prompt and <kbd>C-c C-c</kbd> sends the region (these are gptel's
@@ -63,6 +63,11 @@ backend-specific options and the full list of supported providers.
 
 ## Tips
 
-- `auth-source` is supported for API keys — pass `:key 'gptel-api-key-from-auth-source` or use a function — so you don't have to keep the key in environment variables.
-- `gptel-add` (available from the transient menu) lets you attach buffers, regions, or files to the chat context.
-- For agentic editing workflows, take a look at [aidermacs](https://github.com/MatthewZMD/aidermacs) — it's not bundled here but pairs naturally with this module.
+- `auth-source` is supported for API keys — pass
+  `:key 'gptel-api-key-from-auth-source` or use a function — so you
+  don't have to keep the key in environment variables.
+- `gptel-add` (available from the transient menu) lets you attach
+  buffers, regions, or files to the chat context.
+- For agentic editing workflows, take a look at
+  [aidermacs](https://github.com/MatthewZMD/aidermacs) — it's not
+  bundled here but pairs naturally with this module.

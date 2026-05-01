@@ -119,7 +119,8 @@ These modules provide shared functionality used by other modules:
 - [Programming](programming.md) - common foundation for all programming modes
 - [Lisp Base](lisp.md) - common foundation for Lisp-family language modules
 - [LSP](lsp.md) - common foundation for modules using the Language Server Protocol
-- [Eglot Booster](eglot-booster.md) - speeds up Eglot via the `emacs-lsp-booster` wrapper
+- [Eglot Booster](eglot-booster.md) - speeds up Eglot via
+  the `emacs-lsp-booster` wrapper
 - [Company](company.md) - completion framework (legacy)
 - [Corfu](corfu.md) - lightweight modern alternative to Company
 - [Apheleia](apheleia.md) - async, unified format-on-save

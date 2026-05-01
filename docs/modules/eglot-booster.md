@@ -18,7 +18,8 @@ the binary is missing, so Eglot keeps working as before.
 
     This module assumes you're using Eglot (Prelude's default LSP
     client). If you've switched `prelude-lsp-client` to `lsp-mode`,
-    use the equivalent [`lsp-mode` performance flags](https://emacs-lsp.github.io/lsp-mode/page/performance/)
+    use the equivalent [`lsp-mode` performance
+    flags](https://emacs-lsp.github.io/lsp-mode/page/performance/)
     instead.
 
 ## Setup
