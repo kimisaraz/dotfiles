@@ -34,6 +34,20 @@ else
   echo "~/.config/karabiner/karabiner.json already exists (symlink)"
 fi
 
+# Backup and link Ghostty config
+if [ -e "$HOME/.config/ghostty/config" ] && [ ! -L "$HOME/.config/ghostty/config" ]; then
+  echo "Backing up existing ghostty config..."
+  mv "$HOME/.config/ghostty/config" "$HOME/.config/ghostty/config.backup-$(date +%Y%m%d-%H%M%S)"
+fi
+
+if [ ! -e "$HOME/.config/ghostty/config" ]; then
+  echo "Creating symlink: ~/.config/ghostty/config -> $DOTFILES_DIR/config/ghostty/config"
+  mkdir -p "$HOME/.config/ghostty"
+  ln -s "$DOTFILES_DIR/config/ghostty/config" "$HOME/.config/ghostty/config"
+else
+  echo "~/.config/ghostty/config already exists (symlink)"
+fi
+
 echo "Done! Dotfiles setup complete."
 echo ""
 echo "To update from Prelude upstream:"
