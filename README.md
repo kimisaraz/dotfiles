@@ -10,6 +10,8 @@
 - `emacs.d_old/` - Prelude移行前の設定（参照用）
 - `config/karabiner/` - Karabiner-Elements設定
   - `karabiner.json` - キーバインド設定
+- `config/ghostty/` - Ghostty設定
+  - `config` - ターミナル設定
 
 ## セットアップ
 
@@ -29,6 +31,7 @@ ghq get kimisaraz/dotfiles
 # シンボリックリンクを作成
 ln -s ~/works/github.com/kimisaraz/dotfiles/emacs.d ~/.emacs.d
 ln -s ~/works/github.com/kimisaraz/dotfiles/config/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+ln -s ~/works/github.com/kimisaraz/dotfiles/config/ghostty/config ~/.config/ghostty/config
 ```
 
 ## Preludeの更新を取り込む
