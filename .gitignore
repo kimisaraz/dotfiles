@@ -2,5 +2,5 @@
 /common/emacs/.emacs.d/multisession/
 
 # Karabiner-Elements
-/darwin/karabiner/.config/karabiner/*
-!/darwin/karabiner/.config/karabiner/karabiner.json
+/macos/karabiner/.config/karabiner/*
+!/macos/karabiner/.config/karabiner/karabiner.json

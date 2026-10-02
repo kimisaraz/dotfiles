@@ -13,7 +13,7 @@
     - `.emacs.d/vendor/` - カスタムパッケージ
   - `ghostty/` - Ghostty設定（`~/.config/ghostty/config`）
   - `pandoc/` - pandocテンプレート（`~/.local/share/pandoc/templates`）
-- `darwin/` - macOS専用のパッケージ
+- `macos/` - macOS専用のパッケージ
   - `karabiner/` - Karabiner-Elements設定（`~/.config/karabiner/karabiner.json`）
 - `omarchy/` - Omarchy Linux専用のパッケージ
 - `emacs.d_old/` - Prelude移行前の設定（参照用、stow対象外）
@@ -39,7 +39,7 @@ ghq get kimisaraz/dotfiles
 ```bash
 cd ~/works/github.com/kimisaraz/dotfiles
 stow -d common -t ~ emacs ghostty pandoc
-stow -d darwin -t ~ karabiner
+stow -d macos -t ~ karabiner
 ```
 
 ### パッケージを追加する
