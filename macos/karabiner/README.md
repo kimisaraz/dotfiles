@@ -48,59 +48,83 @@ MacBook USキーボード
   - 単体押し → かな
   - 長押し → Command
 
-単体押し判定タイムアウトはkarabiner.jsonの `basic.to_if_alone_timeout_milliseconds` で設定
+単体押し判定タイムアウトは各ルールの `parameters` にある `basic.to_if_alone_timeout_milliseconds` で設定(現在はすべて200ms)
 - この時間以内にキーを離すと単体押しと判定、それ以上で長押しとして動作する
 - タイムアウト後は単体押しのキーが送信されないことが重要
+- Shift / Commandは `basic.to_if_held_down_threshold_milliseconds` (100ms)も設定している
 
 
 ## Emacsキーバインド
 
+特記のないものは「除外アプリケーション」以外の全アプリで有効
+
 ### 基本操作
-- `Control + g` → Escape
+- `Control + g` → Escape(Emacsでのみ無効。ターミナル等では有効)
+- `Control + [` → Escape(US/ISO配列。全アプリで有効)
+- `Control + ]` → Escape(JIS配列。全アプリで有効)
 
 ### カーソル移動
-- `Control + b` → 左
-- `Control + f` → 右
-- `Control + n` → 下
-- `Control + p` → 上
-- `Control + a` → 行頭
-- `Control + e` → 行末
+- `Control + b` → ←
+- `Control + f` → →
+- `Control + n` → ↓
+- `Control + p` → ↑
+- `Control + a` → `Command + ←`(行頭)
+- `Control + e` → `Command + →`(行末)
+
+`Shift` を併用すると選択になる(例: `Control + Shift + f` → `Shift + →`)。
 
 ### 編集
 - `Control + d` → 前方削除
 - `Control + h` → 後方削除
-- `Control + k` → 行末まで削除
-- `Control + m` → Return
+- `Control + k` → `Shift + Command + →`, `Command + x`(行末まで切り取ってクリップボードに入れる)
+- `Control + y` → `Command + v`(クリップボードから貼り付け)
+- `Control + m` → Return(除外アプリも含め全アプリで有効)
+- `Control + i` → Tab
+
+`Control + k` / `Control + y` の注意:
+- macOS標準のkillバッファではなくクリップボードを使うため、`Control + k` のたびにクリップボードが上書きされる
+- 行末で `Control + k` を押しても改行は削除されない(行が連結されない)
 
 ### ページ移動
 - `Control + v` → Page Down
 - `Option + v` → Page Up
 
+Page Down / Page Upはスクロールするだけで、カーソルは移動しない。
+
 ### 単語移動
-- `Option + b` → 単語単位で左
-- `Option + f` → 単語単位で右
-- `Option + d` → 単語削除
+- `Option + b` → `Option + ←`(単語単位で左)
+- `Option + f` → `Option + →`(単語単位で右)
+- `Option + d` → `Option + Delete`(単語削除)
 
-### その他
-- `Control + i` → Tab
-
-### C-x キーストローク
+### C-x キーストローク(無効化中)
 - `Control + x, Control + c` → Command + q(終了)
 - `Control + x, Control + f` → Command + o(開く)
 - `Control + x, Control + s` → Command + s(保存)
 
+### アプリ別の例外
+Office(Excel / PowerPoint / Word)とEclipseは公式ルールの個別定義が優先される:
+- Office: `Control + a` → Home、`Control + e` → End、`Control + k` → `Shift + End`, Delete(クリップボードには入らない)
+- Eclipse: `Control + a` → `Command + ←`、`Control + e` → `Command + →`
+
 ## 除外アプリケーション
 
-以下のアプリではEmacsキーバインドは無効化：
-- Emacs
-- Terminal / iTerm2
-- リモートデスクトップ
-- 仮想マシン(VMware, Parallels, UTM等)
-- Vim
+以下のアプリではEmacsキーバインドは無効化(アプリ自身がControlキーを使うため、そのまま渡す)：
+- Emacs / Aquamacs / Conkeror
+- ターミナル(Terminal, iTerm2, Hyper, Alacritty, kitty, Ghostty)
+- リモートデスクトップ(Microsoft Remote Desktop, TeamViewer, VNC Viewer, Citrix等)
+- 仮想マシン(VMware, Parallels, VirtualBox, UTM等)
+- X11 / XQuartz
+- Vim(MacVim, VimR)
+- Sublime Text
+- VSCode(下記の専用ルールで個別に設定)
 
 ## VSCode専用設定
 
-VSCodeではEmacsキーバインドが有効(Control+keys, Option+keys)
+VSCodeは除外アプリケーションに含めた上で、専用ルールで以下のみ変換している:
+- `Control + b/f/n/p/a/e/d/h/i/m/v`, `Control + [` / `Control + ]` → 上記と同じ
+- `Control + k` / `Control + y` は変換しない(VSCode標準の動作のまま)
+  - Karabinerで変換すると、選択なしの `Command + x` が行全体を切り取る、内蔵ターミナルのシェル操作が壊れる等の弊害がある
+- `Option + b/f/d/v` は変換しない(専用ルールが無効化されているため)
 
 ## 検討中の項目
 
