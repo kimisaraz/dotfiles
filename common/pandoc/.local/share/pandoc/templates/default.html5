@@ -50,7 +50,11 @@ $endif$
   th { background-color: #2a2a2a; color: #ffffff; }
   tr:nth-child(even) td { background-color: #202020; }
   :not(pre) > code { background-color: #2a2a2a; color: #f0c674; border-radius: 3px; padding: .1em .3em; }
-  pre, div.sourceCode { background-color: #232629; border: 1px solid #3a3a3a; border-radius: 6px; }
+  /* pandoc デフォルトの 36em は狭いので GitHub 程度まで広げる */
+  body { max-width: 60em; }
+  /* 枠は pre だけに付ける。ハイライト付きは div.sourceCode > pre の入れ子になるため外側は素通しにする */
+  div.sourceCode { background-color: transparent; border: none; }
+  pre, pre.sourceCode { background-color: #232629; border: 1px solid #3a3a3a; border-radius: 6px; padding: .9em 1.1em; }
   pre code { color: #cfcfc2; }
   ::selection { background-color: #3a5070; color: #ffffff; }
   /* breezeDark syntax tokens (overrides pandoc default pygments) */
