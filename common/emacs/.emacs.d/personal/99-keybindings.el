@@ -44,6 +44,12 @@
 ;; (global-set-key (kbd "C-M-SPC") 'easy-mark)
 
 ;; anzu
+;; Prelude 2.0 で同梱されなくなったので自前で入れる。
+;; isearch のマッチ数表示は Prelude が有効にする isearch-lazy-count に任せ、
+;; global-anzu-mode は有効にしない
+(use-package anzu
+  :ensure t
+  :commands (anzu-query-replace anzu-query-replace-regexp anzu-replace-at-cursor-thing))
 (global-set-key (kbd "M-%")   'anzu-query-replace) ; was query-replacep
 (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp) ; was query-replace-regexp
 (global-set-key (kbd "C-%")   'anzu-replace-at-cursor-thing)
@@ -65,14 +71,16 @@
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c C-l") 'org-insert-link-global)
 (global-set-key (kbd "C-c C-o") 'org-open-at-point-global)
-(define-key org-mode-map (kbd "C-S-f") 'org-shiftright)
-(define-key org-mode-map (kbd "C-S-b") 'org-shiftleft)
-(define-key org-mode-map (kbd "C-S-p") 'org-shiftup)
-(define-key org-mode-map (kbd "C-S-n") 'org-shiftdown)
-(define-key org-mode-map (kbd "M-F")   'org-metaright)
-(define-key org-mode-map (kbd "M-B")   'org-metaleft)
-(define-key org-mode-map (kbd "M-P")   'org-metaup)
-(define-key org-mode-map (kbd "M-N")   'org-metadown)
+;; Prelude 2.x は org を遅延ロードするので、読み込み後に設定する
+(with-eval-after-load 'org
+  (define-key org-mode-map (kbd "C-S-f") 'org-shiftright)
+  (define-key org-mode-map (kbd "C-S-b") 'org-shiftleft)
+  (define-key org-mode-map (kbd "C-S-p") 'org-shiftup)
+  (define-key org-mode-map (kbd "C-S-n") 'org-shiftdown)
+  (define-key org-mode-map (kbd "M-F")   'org-metaright)
+  (define-key org-mode-map (kbd "M-B")   'org-metaleft)
+  (define-key org-mode-map (kbd "M-P")   'org-metaup)
+  (define-key org-mode-map (kbd "M-N")   'org-metadown))
 
 ;; point-undo
 (global-set-key (kbd "C-<") 'point-undo)
