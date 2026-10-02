@@ -4,7 +4,7 @@
 # Sets up symbolic links for dotfiles with GNU Stow
 #
 #   common/  - packages for all environments
-#   darwin/  - packages for macOS
+#   macos/   - packages for macOS
 #   omarchy/ - packages for Omarchy Linux
 
 set -euo pipefail
@@ -37,7 +37,7 @@ stow_all common
 
 case "$(uname -s)" in
   Darwin)
-    stow_all darwin
+    stow_all macos
     ;;
   Linux)
     if [ -d "$HOME/.local/share/omarchy" ]; then
