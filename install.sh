@@ -1,56 +1,49 @@
 #!/bin/bash
 
 # dotfiles installer script
-# Sets up symbolic links for dotfiles
+# Sets up symbolic links for dotfiles with GNU Stow
+#
+#   common/  - packages for all environments
+#   darwin/  - packages for macOS
+#   omarchy/ - packages for Omarchy Linux
 
-DOTFILES_DIR="$HOME/works/github.com/kimisaraz/dotfiles"
+set -euo pipefail
+
+DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+if ! command -v stow >/dev/null 2>&1; then
+  echo "stow is not installed."
+  echo "  macOS:   brew install stow"
+  echo "  Omarchy: sudo pacman -S stow"
+  exit 1
+fi
+
+# Stow every package under the given group directory
+stow_all() {
+  local group="$DOTFILES_DIR/$1"
+  local pkg
+
+  for pkg in "$group"/*/; do
+    [ -d "$pkg" ] || continue
+    pkg="$(basename "$pkg")"
+    echo "Stowing: $1/$pkg"
+    stow -d "$group" -t "$HOME" --restow "$pkg"
+  done
+}
 
 echo "Setting up dotfiles from: $DOTFILES_DIR"
 
-# Backup and link .emacs.d
-if [ -e "$HOME/.emacs.d" ] && [ ! -L "$HOME/.emacs.d" ]; then
-  echo "Backing up existing .emacs.d..."
-  mv "$HOME/.emacs.d" "$HOME/.emacs.d.backup-$(date +%Y%m%d-%H%M%S)"
-fi
+stow_all common
 
-if [ ! -e "$HOME/.emacs.d" ]; then
-  echo "Creating symlink: ~/.emacs.d -> $DOTFILES_DIR/emacs.d"
-  ln -s "$DOTFILES_DIR/emacs.d" "$HOME/.emacs.d"
-else
-  echo "~/.emacs.d already exists (symlink)"
-fi
-
-# Backup and link Karabiner config
-if [ -e "$HOME/.config/karabiner/karabiner.json" ] && [ ! -L "$HOME/.config/karabiner/karabiner.json" ]; then
-  echo "Backing up existing karabiner.json..."
-  mv "$HOME/.config/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json.backup-$(date +%Y%m%d-%H%M%S)"
-fi
-
-if [ ! -e "$HOME/.config/karabiner/karabiner.json" ]; then
-  echo "Creating symlink: ~/.config/karabiner/karabiner.json -> $DOTFILES_DIR/config/karabiner/karabiner.json"
-  mkdir -p "$HOME/.config/karabiner"
-  ln -s "$DOTFILES_DIR/config/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
-else
-  echo "~/.config/karabiner/karabiner.json already exists (symlink)"
-fi
-
-# Backup and link Ghostty config
-if [ -e "$HOME/.config/ghostty/config" ] && [ ! -L "$HOME/.config/ghostty/config" ]; then
-  echo "Backing up existing ghostty config..."
-  mv "$HOME/.config/ghostty/config" "$HOME/.config/ghostty/config.backup-$(date +%Y%m%d-%H%M%S)"
-fi
-
-if [ ! -e "$HOME/.config/ghostty/config" ]; then
-  echo "Creating symlink: ~/.config/ghostty/config -> $DOTFILES_DIR/config/ghostty/config"
-  mkdir -p "$HOME/.config/ghostty"
-  ln -s "$DOTFILES_DIR/config/ghostty/config" "$HOME/.config/ghostty/config"
-else
-  echo "~/.config/ghostty/config already exists (symlink)"
-fi
+case "$(uname -s)" in
+  Darwin)
+    stow_all darwin
+    ;;
+  Linux)
+    if [ -d "$HOME/.local/share/omarchy" ]; then
+      stow_all omarchy
+    fi
+    ;;
+esac
 
 echo "Done! Dotfiles setup complete."
-echo ""
-echo "To update from Prelude upstream:"
-echo "  cd $DOTFILES_DIR"
-echo "  git fetch upstream"
-echo "  git merge upstream/master"
