@@ -14,7 +14,9 @@
   - `ghostty/` - Ghostty設定（`~/.config/ghostty/config`）
   - `pandoc/` - pandocテンプレート（`~/.local/share/pandoc/templates`）
 - `macos/` - macOS専用のパッケージ
-  - `karabiner/` - Karabiner-Elements設定（`~/.config/karabiner/karabiner.json`）
+  - `karabiner/` - Karabiner-Elements設定（`~/.config/karabiner` をディレクトリごとリンク）
+    - `karabiner.json` 単体をリンクすると変更が検知されないため、[公式の推奨](https://karabiner-elements.pqrs.org/docs/manual/misc/configuration-file-path/)に従う
+    - 自動バックアップなどの `karabiner.json` 以外のファイルは `.gitignore` で除外している
 - `omarchy/` - Omarchy Linux専用のパッケージ
 - `emacs.d_old/` - Prelude移行前の設定（参照用、stow対象外）
 
@@ -32,6 +34,15 @@ ghq get kimisaraz/dotfiles
 
 # インストールスクリプトを実行（common/ と OS に応じたディレクトリを stow する）
 ~/works/github.com/kimisaraz/dotfiles/install.sh
+```
+
+macOS で Karabiner-Elements をインストール済みの場合は `~/.config/karabiner` が実ディレクトリとして存在し、
+stow が衝突で止まるか、ディレクトリではなくファイル単位のリンクになる。事前に退避してから実行し、実行後に Karabiner を再起動する。
+
+```bash
+mv ~/.config/karabiner ~/.config/karabiner.backup-$(date +%Y%m%d)
+~/works/github.com/kimisaraz/dotfiles/install.sh
+launchctl kickstart -k gui/$(id -u)/org.pqrs.service.agent.Karabiner-Console-User-Server
 ```
 
 ### 手動セットアップ
