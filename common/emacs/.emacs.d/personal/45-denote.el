@@ -13,7 +13,9 @@
 (use-package denote
   :ensure t
   :hook
-  ((text-mode . denote-fontify-links-mode)
+  ;; denote ノート以外の text-mode バッファ（markdown など）でエラーにならないよう
+  ;; ガード付きの -maybe を使う（denote ファイルかつ非 org のときだけ有効化される）
+  ((text-mode . denote-fontify-links-mode-maybe)
    (dired-mode . denote-dired-mode))
   :bind*
   (("C-c n n" . denote-create-note)
