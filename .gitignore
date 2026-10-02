@@ -1,19 +1,6 @@
-/.emacs.d/.cask
-/.emacs.d/auto-save-list/
-
-/.emacs.d/backups/*
-!/.emacs.d/backups/.keep
-
-/.emacs.d/recentf
-/.emacs.d/history
-/.emacs.d/bookmarks
-/.emacs.d/ac-comphist.dat
-/.emacs.d/eww-bookmarks
-/.emacs.d/url/
-/.emacs.d/eshell/
-/emacs.d/multisession/
+# Emacs
+/common/emacs/.emacs.d/multisession/
 
 # Karabiner-Elements
-/config/karabiner/*
-!/config/karabiner/karabiner.json
-!/config/karabiner/README.md
+/darwin/karabiner/.config/karabiner/*
+!/darwin/karabiner/.config/karabiner/karabiner.json
