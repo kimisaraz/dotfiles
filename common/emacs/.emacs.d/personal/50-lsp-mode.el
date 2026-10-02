@@ -25,12 +25,13 @@
 ;;   (add-hook 'ruby-mode-hook 'lsp))
 
 ;; TypeScript用LSP設定
+;; Prelude の prelude-ts は typescript-ts-mode にしか LSP を設定しないため、
+;; tree-sitter の文法がなく typescript-mode で開いたときはここで起動する
 (with-eval-after-load 'typescript-mode
   (add-hook 'typescript-mode-hook 'lsp))
 
-;; JavaScript用LSP設定
-(with-eval-after-load 'js-mode
-  (add-hook 'js-mode-hook 'lsp))
+;; JavaScript は Prelude の prelude-js が js-mode / js-ts-mode で
+;; prelude-lsp-enable を呼ぶので、ここでは設定しない
 
 (provide '50-lsp-mode)
 ;;; 50-lsp-mode.el ends here
